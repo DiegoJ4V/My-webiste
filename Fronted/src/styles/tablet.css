@@ -72,7 +72,7 @@ header p {
 
 .main-about-container article {
    
-   min-width: 660px;
+   min-width: 560px;
    max-width: 880px;
 }
 
@@ -111,7 +111,7 @@ header p {
 }
 
 .portfolio-container--card {
-   min-width: 730px;
+   min-width: 610px;
    max-width: 860px;
 }
 
@@ -121,7 +121,7 @@ header p {
    align-items: start;
    gap: 16px;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: repeat(3, 1fr);
+   grid-template-rows: 1fr 1fr 0.6fr;
    padding: 16px 20px;
 }
 
