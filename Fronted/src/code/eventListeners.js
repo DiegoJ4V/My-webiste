@@ -12,24 +12,32 @@ navbarIcon.addEventListener('click', () => {
 languageSelector.addEventListener('click', () => {
    if (languageOption.classList.contains('inactive')) {
       languageOption.classList.remove('inactive');
+      languageOption.removeAttribute("aria-hidden");
+
       if (!navbarMenu.classList.contains('inactive')) {
          navbarMenu.classList.add('inactive');
+         navbarMenu.setAttribute("aria-hidden", true);
       }
    } else {
       languageOption.classList.add('inactive');
+      languageOption.setAttribute("aria-hidden", true);
    }
 });
 
 languageOption.addEventListener('click', () => {
    if (languageOption.innerHTML.includes('Inglés')) {
-      englishText();
+      textByLanguage('en');
       languageOption.classList.add('inactive');
+      languageOption.setAttribute("aria-hidden", true);
+      
    } else {
-      españolText();
+      textByLanguage('es');
       languageOption.classList.add('inactive');
+      languageOption.setAttribute("aria-hidden", true);
    }
 });
 
 navButtons.forEach((button) => button.addEventListener('click', () => {
    navbarMenu.classList.add('inactive');
+   navbarMenu.setAttribute("aria-hidden", true);
 }));

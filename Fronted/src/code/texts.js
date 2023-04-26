@@ -1,4 +1,4 @@
-const text = {
+const textPrincipal = {
    es: {
       nav: {
          technologies: 'Tecnologías',
@@ -47,20 +47,43 @@ const text = {
 
 const portfolio = [
    {
-      github: 'https://github.com/Diego6546/My-website',
-      pageRedirect: 'https://diego6546.github.io/My-website/Fronted/public/index.html',
+      github: 'https://github.com/DiegoJ4V/My-website',
+      pageRedirect: 'https://diegoj4v.github.io/My-website/Fronted/public/index.html',
       url: 'https://my-web-page',
-      image: '',
+      image: '../assets/My-website.png',
       tech: 'Javascript',
       es: {
+         altImage: 'A pequeña porción de este projecto',
          specTech: 'Tecnologías específicas:',
          projectTitle: 'Mi página web',
          description: 'Mi página web personal y mi primer projecto para mostrar mi conocimiento y todos los projectos que he hecho'
       },
       en: {
+         altImage: 'A few portion of this project',
          specTech: 'Specific technologies:',
          projectTitle: 'My web page',
          description: 'My personal website page and my first project to show my knowledge and all the projects that I have done'
       }
    },
 ];
+
+const altImages = {
+   es: [
+      'Diseño responsivo',
+      'Backend',
+      'Sistema de diseño',
+      'Persona caminando en libros',
+      'Video tutorial',
+      'Diseño mobil',
+      portfolio[0].es.altImage,
+   ],
+   en: [
+      'Responsive design',
+      'Backend',
+      'Design System',
+      'Person walking on books',
+      'Tutorial video',
+      'Mobile Design',
+      portfolio[0].en.altImage,
+   ]
+}

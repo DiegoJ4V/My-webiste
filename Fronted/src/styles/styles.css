@@ -9,7 +9,7 @@
    --blue: #3947F2;
 
    --border-light: 2px solid black;
-   --shadow-light: 2px;
+   --shadow-light: 4px;
    --shadow-heavy: 8px;
 
    --h2-size: 2.4rem;
@@ -21,7 +21,6 @@
    box-sizing: border-box;
    padding: 0;
    margin: 0;
-   transition: box-shadow 0.5s;
 }
 
 html {
@@ -62,6 +61,11 @@ nav {
    height: 48px;
 }
 
+.navbar--mobile button {
+   cursor: pointer;
+   border-style: none;
+}
+
 .navbar--mobile svg {
    margin-left: 12px;
 }
@@ -89,7 +93,7 @@ nav {
    color: var(--black);
 }
 
-.navbar--mobile__menu a:hover {
+.navbar--mobile__menu a:hover, a:focus {
    text-decoration: underline;
 }
 
@@ -103,7 +107,7 @@ nav button {
    align-items: center;
 }
 
-.language--selector--selected:hover {
+.language--selector--selected:hover,  .language--selector--selected:focus {
    text-decoration: underline;
    cursor: pointer;
 }
@@ -118,7 +122,7 @@ nav button {
    box-shadow: -4px 4px 0 var(--black);
 }
 
-.language--selector--option:hover {
+.language--selector--option:hover, .language--selector--option:focus {
    text-decoration: underline;
    cursor: pointer;
 }
@@ -469,10 +473,11 @@ header p {
    margin-right: 10px;
 }
 
-.card--tabs__icon:hover {
+.card--tabs__icon:hover, .card--tabs__icon:focus {
    cursor: pointer;
    text-decoration: underline;
    box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
+   transition: box-shadow 0.5s;
 }
 
 .portfolio--card--content {
@@ -486,9 +491,10 @@ header p {
 }
 
 .portfolio--card--content img {
-   width: 170px;
-   height: 114px;
+   width: 190px;
+   height: 140px;
    margin: 16px 0 12px 0;
+   border: 2px solid black;
 }
 
 .card--content--technologies {
@@ -553,10 +559,11 @@ footer a {
    align-items: center;
 }
 
-footer a:hover {
+footer a:hover, a:focus {
    text-decoration: underline;
    cursor: pointer;
    box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
+   transition: box-shadow 0.5s;
 }
 
 footer svg {

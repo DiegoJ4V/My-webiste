@@ -16,23 +16,25 @@
       <div class="navbar--desktop">
          <ul class="navbar--desktop__menu">
             <li>
-               <a class="navbar--desktop__item" href="#technologies">Technologies</a>
+               <a href="#technologies">Technologies</a>
             </li>
             <li>
-               <a class="navbar--desktop__item" href="#about">About</a>
+               <a href="#about">About</a>
             </li>
             <li>
-               <a class="navbar--desktop__item" href="#portfolio">Portfolio</a>
+               <a href="#portfolio">Portfolio</a>
             </li>
             <li>
-               <a class="navbar--desktop__item" href="#contact">Contact</a>
+               <a href="#contact">Contact</a>
             </li>
          </ul>
       </div>
       <div class="navbar--mobile">
-         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 18H34V14H6V18ZM6 26H34V22H6V26ZM6 34H34V30H6V34ZM38 34H42V30H38V34ZM38 14V18H42V14H38ZM38 26H42V22H38V26Z" fill="black"/>
-         </svg>            
+         <button>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M6 18H34V14H6V18ZM6 26H34V22H6V26ZM6 34H34V30H6V34ZM38 34H42V30H38V34ZM38 14V18H42V14H38ZM38 26H42V22H38V26Z" fill="black"/>
+            </svg>            
+         </button>
          <ul class="navbar--mobile__menu inactive">
             <li>
                <a href="#technologies">Technologies</a>
@@ -55,7 +57,7 @@
                <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="black"/>
             </svg>               
          </button>
-         <button class="language--selector--option inactive">
+         <button class="language--selector--option inactive" aria-hidden="true">
             Spanish
          </button>
       </div>
@@ -95,7 +97,7 @@
                   </ul>
                </div>
             </div>
-            <img src="../src/assets/big-svg/technologies1.svg" alt="">
+            <img src="../src/assets/big-svg/technologies1.svg" alt="Responsive design">
          </article>
          <article class="technologies--right--article">
             <div class="technologies-container--card technologies--right--card">
@@ -121,7 +123,7 @@
                   </ul>
                </div>
             </div>
-            <img src="../src/assets/big-svg/technologies2.svg" alt="">
+            <img src="../src/assets/big-svg/technologies2.svg" alt="Backend">
          </article>
          <article class="technologies--left--article">
             <div class="technologies-container--card technologies--left--card">
@@ -134,15 +136,17 @@
                </div>
                <div class="technologies--card--content">
                   <div class="technologies--content__secondary">
-                     <li>Git</li>
-                     <li>Github</li>
-                     <li>Figma</li>
-                     <li>Design System</li>
-                     <li>GraphQL</li>
+                     <ul>
+                        <li>Git</li>
+                        <li>Github</li>
+                        <li>Figma</li>
+                        <li>Design System</li>
+                        <li>GraphQL</li>
+                     </ul>
                   </div>
                </div>
             </div>
-            <img src="../src/assets/big-svg/technologies3.svg" alt="">
+            <img src="../src/assets/big-svg/technologies3.svg" alt="Design System">
          </article>
       </section>
       <section class="main-about-container" id="about">
@@ -153,7 +157,7 @@
                <p class="about-container__published">Published at the beginning of this path</p>
                <p class="about-container__text">As a person who wants to be a programmer and has no idea of the way to go Sto work as a programmer, I knew Minecraft and I know in what language it was built in, and with that in mind, I start to study Java with the idea of using it to make mods and practice with it and gradually become a programmer (I still don’t even know how they are made).</p>   
             </div>
-            <img loading="lazy" src="../src/assets/big-svg/about1.svg" alt="">                      
+            <img loading="lazy" src="../src/assets/big-svg/about1.svg" alt="Person walking in books">                      
          </article>
          <article class="about--left--card">
             <div>
@@ -161,7 +165,7 @@
                <p class="about-container__published">Published in the middle of this path</p>
                <p class="about-container__text">I studied on my own using paid courses as well as free resources that I found, and gradually I started to realize how the web ecosystem is, and how much I have to learn beyond to Java.</p>
             </div>
-            <img loading="lazy" src="../src/assets/big-svg/about2.svg" alt="">
+            <img loading="lazy" src="../src/assets/big-svg/about2.svg" alt="Tutorial video">
          </article>
          <article class="about--right--card">
             <div>
@@ -169,7 +173,7 @@
                <p class="about-container__published">Published at the end? of this path</p>
                <p class="about-container__text">Now I not only know backend and frontend, but I also learned web design and various technologies used in the web ecosystem, which I have been able to use in a couple of projects to see what I can do and to understand the possibilities of the web</p>
             </div>
-            <img loading="lazy" src="../src/assets/big-svg/about3.svg" alt="">
+            <img loading="lazy" src="../src/assets/big-svg/about3.svg" alt="Mobile Design">
          </article>
       </section>
       <section class="main-portfolio-container" id="portfolio">
@@ -189,7 +193,7 @@
                </a>
             </div>
             <div class="portfolio--card--content">
-               <img loading="lazy" src="../src/assets/image 4.png" alt="This website">
+               <img loading="lazy" src="../src/assets/My-website.jpg" alt="A few portion of this project">
                <div>
                   <p class="card--content--technologies">Specific technologies:</p>
                   <ul>
@@ -205,7 +209,7 @@
    <footer id="contact">
       <h2>Contact me</h2>
       <div>
-         <a href="https://www.linkedin.com/in/diego-guadarrama-hern%C3%A1ndez-b6504b274/">
+         <a href="https://www.linkedin.com/in/diego-guadarrama-hern%C3%A1ndez-b6504b274/" target="_blank">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                <g clip-path="url(#clip0_164_164)">
                <path d="M6.201 21H1.84725V6.9795H6.201V21ZM4.0215 5.067C2.6295 5.067 1.5 3.9135 1.5 2.5215C1.5 1.85276 1.76566 1.2114 2.23853 0.73853C2.7114 0.265657 3.35276 0 4.0215 0C4.69024 0 5.3316 0.265657 5.80447 0.73853C6.27734 1.2114 6.543 1.85276 6.543 2.5215C6.543 3.9135 5.4135 5.067 4.0215 5.067ZM22.4955 21H18.1515V14.175C18.1515 12.5482 18.1185 10.4625 15.888 10.4625C13.6245 10.4625 13.2772 12.2295 13.2772 14.058V21H8.928V6.9795H13.1033V8.892H13.164C13.7453 7.79025 15.165 6.62775 17.283 6.62775C21.6893 6.62775 22.4993 9.5295 22.4993 13.2983V21H22.4955Z" fill="black"/>
@@ -218,17 +222,17 @@
             </svg>               
             LinkedIn
          </a>
-         <a href="https://github.com/DiegoJ4V">
+         <a href="https://github.com/DiegoJ4V" target="_blank">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 14.42 2.87 18.17 6.84 19.5C7.34 19.58 7.5 19.27 7.5 19V17.31C4.73 17.91 4.14 15.97 4.14 15.97C3.68 14.81 3.03 14.5 3.03 14.5C2.12 13.88 3.1 13.9 3.1 13.9C4.1 13.97 4.63 14.93 4.63 14.93C5.5 16.45 6.97 16 7.54 15.76C7.63 15.11 7.89 14.67 8.17 14.42C5.95 14.17 3.62 13.31 3.62 9.5C3.62 8.39 4 7.5 4.65 6.79C4.55 6.54 4.2 5.5 4.75 4.15C4.75 4.15 5.59 3.88 7.5 5.17C8.29 4.95 9.15 4.84 10 4.84C10.85 4.84 11.71 4.95 12.5 5.17C14.41 3.88 15.25 4.15 15.25 4.15C15.8 5.5 15.45 6.54 15.35 6.79C16 7.5 16.38 8.39 16.38 9.5C16.38 13.32 14.04 14.16 11.81 14.41C12.17 14.72 12.5 15.33 12.5 16.26V19C12.5 19.27 12.66 19.59 13.17 19.5C17.14 18.16 20 14.42 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0Z" fill="black"/>
             </svg>       
             Github
          </a>
-         <a href="">
+         <a href="mailto:diegoj4v@gmail.com" target="_blank">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M20 18H18V9.25L12 13L6 9.25V18H4V6H5.2L12 10.25L18.8 6H20M20 4H4C2.89 4 2 4.89 2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4Z" fill="black"/>
             </svg>               
-            Email
+            <p class="contact__email">Email</p>
          </a>
       </div>
    </footer>

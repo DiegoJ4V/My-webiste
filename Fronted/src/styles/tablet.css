@@ -22,7 +22,7 @@ nav {
    text-decoration: none;
 }
 
-.navbar--desktop a:hover {
+.navbar--desktop a:hover, a:focus {
    text-decoration: underline;
 }
 
@@ -58,11 +58,9 @@ header p {
    margin: 24px 0 0 64px;
 }
 
-.main-technologies-container {
-   padding-left: auto;
-}
-
 .main-technologies-container img {
+   width: auto;
+   height: auto;
    margin: 0 48px;
 }
 
@@ -120,7 +118,7 @@ header p {
    justify-content: start;
    align-items: start;
    gap: 16px;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 0.9fr 0.8fr;
    grid-template-rows: 1fr 1fr 0.6fr;
    padding: 16px 20px;
 }
@@ -157,7 +155,7 @@ header p {
 }
 
 .portfolio--card--content h3 {
-   font-size: 5.2rem;
+   font-size: 4.8rem;
    padding-top: 24px;
    margin: 0;
 }
