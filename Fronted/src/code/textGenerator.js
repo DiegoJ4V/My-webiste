@@ -22,7 +22,7 @@ function textByLanguage(preferLanguage) {
       textVariables = languageVariables.es;
    } else {
       textLanguage = textPrincipal.en;
-      portfolioText = portfolio[0].es;
+      portfolioText = portfolio[0].en;
       textVariables = languageVariables.en;
    }
 
