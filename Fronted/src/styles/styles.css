@@ -466,6 +466,7 @@ header p {
    font-size: 1.2rem;
    text-decoration: none;
    color: var(--black);
+   transition: box-shadow 0.5s;
 }
 
 .card--tabs__icon:nth-child(2) {
@@ -557,6 +558,7 @@ footer a {
    font-size: 1.8rem;
    color: var(--black);
    align-items: center;
+   transition: box-shadow 0.5s;
 }
 
 footer a:hover, a:focus {
