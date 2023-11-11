@@ -1,4 +1,6 @@
-const userLang = navigator.language;
+import { aboutDesc, aboutPublished, aboutTitle, contactEmail, contactTitle, deskNav, headerParagraph, images, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectTech, projectTitle, techTitle } from "./selectors.js";
+import { altImages, portfolio, textPrincipal } from "./texts.js";
+
 const languageVariables = {
    es: [
       'Español',
@@ -10,9 +12,9 @@ const languageVariables = {
       'Spanish',
       'Email',
    ]
-}
+};
 
-function textByLanguage(preferLanguage) {
+export function textByLanguage(preferLanguage) {
    let textLanguage;
    let textVariables;
    let portfolioText;
@@ -28,9 +30,9 @@ function textByLanguage(preferLanguage) {
 
    const nav = textLanguage.nav;
 
-   deskNav[0].textContent = nav.technologies;
-   deskNav[1].textContent = nav.about;
-   deskNav[2].textContent = nav.portfolio;
+   deskNav[0].textContent = nav.portfolio;
+   deskNav[1].textContent = nav.technologies;
+   deskNav[2].textContent = nav.about;
    deskNav[3].textContent = nav.contact;
 
    mobNav[0].textContent = nav.technologies;
@@ -74,8 +76,4 @@ function altIterator(altLanguage) {
    for (let i = 0; i < altText.length; i++) {
       images[i].alt = altText[i];
    }
-}
-
-if (userLang.includes('es')) {
-   textByLanguage('es');
 }

@@ -1,3 +1,12 @@
+import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu } from "./code/selectors.js";
+import { textByLanguage } from "./code/textGenerator.js";
+
+const userLang = navigator.language;
+
+if (userLang.includes('es')) {
+   textByLanguage('es');
+}
+
 navbarIcon.addEventListener('click', () => {
    if (navbarMenu.classList.contains('inactive')) {
       navbarMenu.classList.remove('inactive');
@@ -10,6 +19,7 @@ navbarIcon.addEventListener('click', () => {
 });
 
 languageSelector.addEventListener('click', () => {
+
    if (languageOption.classList.contains('inactive')) {
       languageOption.classList.remove('inactive');
       languageOption.removeAttribute("aria-hidden");

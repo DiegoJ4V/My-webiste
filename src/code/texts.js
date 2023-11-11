@@ -1,9 +1,9 @@
-const textPrincipal = {
+export const textPrincipal = {
    es: {
       nav: {
+         portfolio: 'Portafolio',
          technologies: 'Tecnologías',
          about: 'Acerca de',
-         portfolio: 'Portafolio',
          contact: 'Contacto'
       },
       introduction: 'Hola, soy Diego, un desarrollador Java Full Stack con habilidades de diseño que disfruta todo el ecosistema web y desarrollar en él',
@@ -19,13 +19,13 @@ const textPrincipal = {
          ]
       },
       portfolio: 'Portafolio',
-      contact: 'Contacteme'
+      contact: 'Contácteme'
    },
    en: {
       nav: {
+         portfolio: 'Portfolio',
          technologies: 'Technologies',
          about: 'About',
-         portfolio: 'Portfolio',
          contact: 'Contact'
       },
       introduction: "Hi, I’m Diego, a Java Full Stack web developer with design abilities who enjoy the whole web ecosystem and develop in it",
@@ -45,7 +45,7 @@ const textPrincipal = {
    }
 };
 
-const portfolio = [
+export const portfolio = [
    {
       github: 'https://github.com/DiegoJ4V/My-website',
       pageRedirect: 'https://diegoj4v.github.io/My-website/Fronted/public/index.html',
@@ -53,10 +53,10 @@ const portfolio = [
       image: '../assets/My-website.png',
       tech: 'Javascript',
       es: {
-         altImage: 'A pequeña porción de este projecto',
+         altImage: 'A pequeña porción de este proyecto',
          specTech: 'Tecnologías específicas:',
          projectTitle: 'Mi página web',
-         description: 'Mi página web personal y mi primer projecto para mostrar mi conocimiento y todos los projectos que he hecho'
+         description: 'Mi página web personal y mi primer proyecto para mostrar mi conocimiento y todos los proyectos que he hecho'
       },
       en: {
          altImage: 'A few portion of this project',
@@ -67,14 +67,14 @@ const portfolio = [
    },
 ];
 
-const altImages = {
+export const altImages = {
    es: [
       'Diseño responsivo',
       'Backend',
       'Sistema de diseño',
       'Persona caminando en libros',
       'Video tutorial',
-      'Diseño mobil',
+      'Diseño móvil',
       portfolio[0].es.altImage,
    ],
    en: [
@@ -86,4 +86,4 @@ const altImages = {
       'Mobile Design',
       portfolio[0].en.altImage,
    ]
-}
+};
