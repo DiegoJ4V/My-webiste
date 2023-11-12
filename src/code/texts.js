@@ -4,9 +4,12 @@ export const textPrincipal = {
          portfolio: 'Portafolio',
          technologies: 'Tecnologías',
          about: 'Acerca de',
-         contact: 'Contacto'
       },
-      introduction: 'Hola, soy Diego, un desarrollador Java Full Stack con habilidades de diseño que disfruta todo el ecosistema web y desarrollar en él',
+      header: {
+         to: "Para: Usted",
+         introduction: 'Hola, soy Diego, un desarrollador Java Full Stack con habilidades de diseño que disfruta todo el ecosistema web y desarrollar en él',
+         email: "Responder"
+      },
       technologies: 'Tecnologías',
       about: {
          title: 'Acerca de mí',
@@ -19,16 +22,18 @@ export const textPrincipal = {
          ]
       },
       portfolio: 'Portafolio',
-      contact: 'Contácteme'
    },
    en: {
       nav: {
          portfolio: 'Portfolio',
          technologies: 'Technologies',
          about: 'About',
-         contact: 'Contact'
       },
-      introduction: "Hi, I’m Diego, a Java Full Stack web developer with design abilities who enjoy the whole web ecosystem and develop in it",
+      header: {
+         to: "To: You",
+         introduction: "Hi, I’m Diego, a Java Full Stack web developer with design abilities who enjoy the whole web ecosystem and develop in it",
+         email: "Reply"
+      },
       technologies: 'Technologies',
       about: {
          title: 'About me',
@@ -41,7 +46,6 @@ export const textPrincipal = {
          ]
       },
       portfolio: 'Portfolio',
-      contact: 'Contact me'
    }
 };
 

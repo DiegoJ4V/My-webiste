@@ -1,4 +1,4 @@
-import { aboutDesc, aboutPublished, aboutTitle, contactEmail, contactTitle, deskNav, headerParagraph, images, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectTech, projectTitle, techTitle } from "./selectors.js";
+import { aboutDesc, aboutPublished, aboutTitle, deskNav, headerParagraph, headerReply, images, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectTech, projectTitle, techTitle } from "./selectors.js";
 import { altImages, portfolio, textPrincipal } from "./texts.js";
 
 const languageVariables = {
@@ -33,17 +33,17 @@ export function textByLanguage(preferLanguage) {
    deskNav[0].textContent = nav.portfolio;
    deskNav[1].textContent = nav.technologies;
    deskNav[2].textContent = nav.about;
-   deskNav[3].textContent = nav.contact;
 
-   mobNav[0].textContent = nav.technologies;
-   mobNav[1].textContent = nav.about;
-   mobNav[2].textContent = nav.portfolio;
-   mobNav[3].textContent = nav.contact;
+   mobNav[0].textContent = nav.portfolio;
+   mobNav[1].textContent = nav.technologies;
+   mobNav[2].textContent = nav.about;
 
    languageSelector.textContent = textVariables[0];
    languageOption.textContent = textVariables[1];
 
-   headerParagraph.textContent = textLanguage.introduction;
+   headerParagraph[1].textContent = textLanguage.header.to;
+   headerParagraph[2].textContent = textLanguage.header.introduction;
+   headerReply.textContent = textLanguage.header.email;
 
    techTitle.textContent = textLanguage.technologies;
 
@@ -59,9 +59,6 @@ export function textByLanguage(preferLanguage) {
    projectTech.textContent = portfolioText.specTech;
    projectTitle.textContent = portfolioText.projectTitle;
    projectDesc.textContent = portfolioText.description;
-
-   contactTitle.textContent = textLanguage.contact;
-   contactEmail.textContent = textVariables[2];
 
    altIterator(preferLanguage);
 }
