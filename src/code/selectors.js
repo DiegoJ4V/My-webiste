@@ -1,3 +1,6 @@
+export const technologiesContainers = document.querySelectorAll(".main-technologies-container article");
+export const aboutContainers = document.querySelectorAll(".main-about-container article");
+
 export const deskNav = document.querySelectorAll('.navbar--desktop__menu li a');
 export const mobNav = document.querySelectorAll('.navbar--mobile li a');
 

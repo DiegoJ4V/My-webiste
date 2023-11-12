@@ -1,4 +1,4 @@
-import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu } from "./code/selectors.js";
+import { aboutContainers, languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, technologiesContainers } from "./code/selectors.js";
 import { textByLanguage } from "./code/textGenerator.js";
 
 const userLang = navigator.language;
@@ -6,6 +6,32 @@ const userLang = navigator.language;
 if (userLang.includes('es')) {
    textByLanguage('es');
 }
+
+function isInViewport(element) {
+   const rect = element.getBoundingClientRect();
+   return (
+      rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 200
+
+   );
+}
+
+function isAnimate(element) {
+   return !element.classList.contains("animate-pop-in");
+}
+
+document.addEventListener("scroll", () => {
+   technologiesContainers.forEach((element) => {
+      if (isInViewport(element) && isAnimate(element)) {
+         element.classList.add("animate-pop-in");
+      }
+   });
+   aboutContainers.forEach((element) => {
+      if (isInViewport(element) && isAnimate(element)) {
+         element.classList.add("animate-pop-in");
+      }
+   });
+});
 
 navbarIcon.addEventListener('click', () => {
    if (navbarMenu.classList.contains('inactive')) {
