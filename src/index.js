@@ -1,7 +1,7 @@
-import { aboutContainers, languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, technologiesContainers } from "./code/selectors.js";
-import { textByLanguage } from "./code/textGenerator.js";
+import { aboutContainers, languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, portfolioContainer, technologiesContainers } from './code/selectors.js';
+import { textByLanguage } from './code/textGenerator.js';
 
-const userLang = navigator.language;
+const userLang = localStorage.getItem('language') ?? navigator.language;
 
 if (userLang.includes('es')) {
    textByLanguage('es');
@@ -17,18 +17,14 @@ function isInViewport(element) {
 }
 
 function isAnimate(element) {
-   return !element.classList.contains("animate-pop-in");
+   return !element.classList.contains('animate-pop-in');
 }
 
-document.addEventListener("scroll", () => {
-   technologiesContainers.forEach((element) => {
+document.addEventListener('scroll', () => {
+   const containers = [...portfolioContainer, ...technologiesContainers, ...aboutContainers];
+   containers.forEach((element) => {
       if (isInViewport(element) && isAnimate(element)) {
-         element.classList.add("animate-pop-in");
-      }
-   });
-   aboutContainers.forEach((element) => {
-      if (isInViewport(element) && isAnimate(element)) {
-         element.classList.add("animate-pop-in");
+         element.classList.add('animate-pop-in');
       }
    });
 });
@@ -48,32 +44,34 @@ languageSelector.addEventListener('click', () => {
 
    if (languageOption.classList.contains('inactive')) {
       languageOption.classList.remove('inactive');
-      languageOption.removeAttribute("aria-hidden");
+      languageOption.removeAttribute('aria-hidden');
 
       if (!navbarMenu.classList.contains('inactive')) {
          navbarMenu.classList.add('inactive');
-         navbarMenu.setAttribute("aria-hidden", true);
+         navbarMenu.setAttribute('aria-hidden', true);
       }
    } else {
       languageOption.classList.add('inactive');
-      languageOption.setAttribute("aria-hidden", true);
+      languageOption.setAttribute('aria-hidden', true);
    }
 });
 
 languageOption.addEventListener('click', () => {
    if (languageOption.innerHTML.includes('Inglés')) {
       textByLanguage('en');
+      localStorage.setItem('language', 'en');
       languageOption.classList.add('inactive');
-      languageOption.setAttribute("aria-hidden", true);
+      languageOption.setAttribute('aria-hidden', true);
       
    } else {
       textByLanguage('es');
+      localStorage.setItem('language', 'es');
       languageOption.classList.add('inactive');
-      languageOption.setAttribute("aria-hidden", true);
+      languageOption.setAttribute('aria-hidden', true);
    }
 });
 
 navButtons.forEach((button) => button.addEventListener('click', () => {
    navbarMenu.classList.add('inactive');
-   navbarMenu.setAttribute("aria-hidden", true);
+   navbarMenu.setAttribute('aria-hidden', true);
 }));

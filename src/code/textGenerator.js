@@ -1,5 +1,5 @@
-import { aboutDesc, aboutPublished, aboutTitle, deskNav, headerParagraph, headerReply, images, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectTech, projectTitle, techTitle } from "./selectors.js";
-import { altImages, portfolio, textPrincipal } from "./texts.js";
+import { aboutDesc, aboutPublished, aboutTitle, deskNav, headerParagraph, headerReply, images, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectTech, projectTitle, techTitle } from './selectors.js';
+import { altImages, portfolio, textPrincipal } from './texts.js';
 
 const languageVariables = {
    es: [
@@ -30,13 +30,15 @@ export function textByLanguage(preferLanguage) {
 
    const nav = textLanguage.nav;
 
-   deskNav[0].textContent = nav.portfolio;
-   deskNav[1].textContent = nav.technologies;
-   deskNav[2].textContent = nav.about;
+   deskNav[0].textContent = nav.presentation;
+   deskNav[1].textContent = nav.portfolio;
+   deskNav[2].textContent = nav.technologies;
+   deskNav[3].textContent = nav.about;
 
-   mobNav[0].textContent = nav.portfolio;
-   mobNav[1].textContent = nav.technologies;
-   mobNav[2].textContent = nav.about;
+   mobNav[0].textContent = nav.presentation;
+   mobNav[1].textContent = nav.portfolio;
+   mobNav[2].textContent = nav.technologies;
+   mobNav[3].textContent = nav.about;
 
    languageSelector.textContent = textVariables[0];
    languageOption.textContent = textVariables[1];

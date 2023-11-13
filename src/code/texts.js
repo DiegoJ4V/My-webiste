@@ -1,6 +1,7 @@
 export const textPrincipal = {
    es: {
       nav: {
+         presentation: 'Presentación',
          portfolio: 'Portafolio',
          technologies: 'Tecnologías',
          about: 'Acerca de',
@@ -25,6 +26,7 @@ export const textPrincipal = {
    },
    en: {
       nav: {
+         presentation: 'Presentation',
          portfolio: 'Portfolio',
          technologies: 'Technologies',
          about: 'About',
