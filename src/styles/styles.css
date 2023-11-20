@@ -336,6 +336,9 @@ header {
             list-style-position: inside;
             & li {
                font-size: 1.4rem;
+               & small {
+                  display: inline-block;
+               }
             }
          }
          & .content--technologies--list {
