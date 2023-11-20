@@ -1,4 +1,4 @@
-import { aboutDesc, aboutPublished, aboutTitle, deskNav, headerParagraph, headerReply, images, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectTech, projectTitle, techTitle } from './selectors.js';
+import { deskNav, headerParagraph, headerReply, images, languageOption, languageSelector, mobNav, projectDesc, projectFeatures, projectFeaturesTitle, projectTechTitle, techTitle } from './selectors.js';
 import { altImages, portfolio, textPrincipal } from './texts.js';
 
 const languageVariables = {
@@ -33,34 +33,27 @@ export function textByLanguage(preferLanguage) {
    deskNav[0].textContent = nav.presentation;
    deskNav[1].textContent = nav.portfolio;
    deskNav[2].textContent = nav.technologies;
-   deskNav[3].textContent = nav.about;
 
    mobNav[0].textContent = nav.presentation;
    mobNav[1].textContent = nav.portfolio;
    mobNav[2].textContent = nav.technologies;
-   mobNav[3].textContent = nav.about;
 
    languageSelector.textContent = textVariables[0];
    languageOption.textContent = textVariables[1];
 
-   headerParagraph[1].textContent = textLanguage.header.to;
-   headerParagraph[2].textContent = textLanguage.header.introduction;
+   headerParagraph[1].textContent = textLanguage.header.from;
+   headerParagraph[2].textContent = textLanguage.header.to;
+   headerParagraph[3].textContent = textLanguage.header.introduction;
    headerReply.textContent = textLanguage.header.email;
 
-   techTitle.textContent = textLanguage.technologies;
-
-   aboutTitle.textContent = textLanguage.about.title;
-   aboutPublished[0].textContent = textLanguage.about.published[0];
-   aboutPublished[1].textContent = textLanguage.about.published[1];
-   aboutPublished[2].textContent = textLanguage.about.published[2];
-   aboutDesc[0].textContent = textLanguage.about.history[0];
-   aboutDesc[1].textContent = textLanguage.about.history[1];
-   aboutDesc[2].textContent = textLanguage.about.history[2];
-
-   portfolioTitle.textContent = textLanguage.portfolio;
-   projectTech.textContent = portfolioText.specTech;
-   projectTitle.textContent = portfolioText.projectTitle;
    projectDesc.textContent = portfolioText.description;
+   projectFeaturesTitle.textContent = portfolioText.featuresTitle;
+   for (let i = 0; i < projectFeatures.length ; i++) {
+      projectFeatures[i].innerHTML = portfolioText.features[i];
+   }
+   projectTechTitle.textContent = portfolioText.specTech;
+
+   techTitle.textContent = textLanguage.technologies;
 
    altIterator(preferLanguage);
 }

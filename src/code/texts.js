@@ -7,9 +7,10 @@ export const textPrincipal = {
          about: 'Acerca de',
       },
       header: {
-         to: "Para: Usted",
-         introduction: 'Hola, soy Diego, un desarrollador Java Full Stack con habilidades de diseño que disfruta todo el ecosistema web y desarrollar en él',
-         email: "Responder"
+         from: 'Desde: México',
+         to: 'Para: Usted',
+         introduction: 'Buen día.\nMe gustaría presentarme formalmente.\nENTUSIASTA en el ecosistema web con React y Spring. Autodidacta bilingüe que le gusta enfrentarse al código de forma nativa tanto como sea posible. Quien buscara y aprenderá lo necesario para enfrentarse a todos los problemas que se enfrente.',
+         email: 'Responder'
       },
       technologies: 'Tecnologías',
       about: {
@@ -32,9 +33,10 @@ export const textPrincipal = {
          about: 'About',
       },
       header: {
-         to: "To: You",
-         introduction: "Hi, I’m Diego, a Java Full Stack web developer with design abilities who enjoy the whole web ecosystem and develop in it",
-         email: "Reply"
+         from: 'From: México',
+         to: 'To: You',
+         introduction: 'Good day.\nI would like to formally introduce myself.\nENTHUSIASTIC in the web ecosystem with React and Spring. Bilingual self-taught who likes to go to the code as native as possible. Who will search and learn the necessary to go to the problems he faces.',
+         email: 'Reply'
       },
       technologies: 'Technologies',
       about: {
@@ -53,22 +55,39 @@ export const textPrincipal = {
 
 export const portfolio = [
    {
-      github: 'https://github.com/DiegoJ4V/My-website',
-      pageRedirect: 'https://diegoj4v.github.io/My-website/Fronted/public/index.html',
-      url: 'https://my-web-page',
-      image: '../assets/My-website.png',
-      tech: 'Javascript',
       es: {
-         altImage: 'A pequeña porción de este proyecto',
-         specTech: 'Tecnologías específicas:',
-         projectTitle: 'Mi página web',
-         description: 'Mi página web personal y mi primer proyecto para mostrar mi conocimiento y todos los proyectos que he hecho'
+         altImage: 'Página de inicio de sesión para bank account',
+         specTech: 'Tecnologías usadas:',
+         description: 'Single page application, y simulación de un sistema de banco desplegado en Azure.',
+         featuresTitle : 'Características',
+         features: [
+            'Material design', 
+            'Sistema de transacciones, y la capacidad para automatizarlas',
+            'Diseño responsivo con modo claro y oscuro',
+            'Traducciones para los idiomas Español e Ingles',
+            'Sistema de seguridad basado en jwt y tokens',
+            'Pruebas con junit y spring para Java',
+            'Pruebas con vitest, msw, y react testing library para Javascript',
+            'Documentación de la api usando <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">swagger</a>',
+            'Documentación con JSDoc y Javadoc'
+         ]
       },
       en: {
-         altImage: 'A few portion of this project',
-         specTech: 'Specific technologies:',
-         projectTitle: 'My web page',
-         description: 'My personal website page and my first project to show my knowledge and all the projects that I have done'
+         altImage: 'Sign in page for bank account',
+         specTech: 'Technologies used:',
+         description: 'Single page application, and simulation of bank system deployed in Azure.',
+         featuresTitle : 'Features',
+         features: [
+            'Material design', 
+            'Transactions system, and the ability to automate them',
+            'Responsive design with light and dark mode',
+            'Translation for English and Spanish language',
+            'Security system based in jwt and tokens',
+            'Testing with junit and spring for Java',
+            'Testing with vitest, msw, and react testing library for Javascript',
+            'Api documentation using <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">swagger</a>',
+            'Documentation with JSDoc and Javadoc'
+         ]
       }
    },
 ];
@@ -78,18 +97,12 @@ export const altImages = {
       'Diseño responsivo',
       'Backend',
       'Sistema de diseño',
-      'Persona caminando en libros',
-      'Video tutorial',
-      'Diseño móvil',
       portfolio[0].es.altImage,
    ],
    en: [
       'Responsive design',
       'Backend',
       'Design System',
-      'Person walking on books',
-      'Tutorial video',
-      'Mobile Design',
       portfolio[0].en.altImage,
    ]
 };
