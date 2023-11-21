@@ -68,7 +68,7 @@ export const portfolio = [
             'Sistema de seguridad basado en jwt y tokens',
             'Pruebas con junit y spring para Java',
             'Pruebas con vitest, msw, y react testing library para Javascript',
-            '<span>Componentes con <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">Storybook</a></span><small>❗ Precaución: Storybook tiene problemas con la versión de móvil</small>',
+            '<span>Componentes y páginas con pruebas de interacción con <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">Storybook</a></span><small>❗ Precaución: Storybook tiene problemas con la versión de móvil</small>',
             'Documentación de la api usando <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">swagger</a>',
             'Documentación con JSDoc y Javadoc'
          ]
@@ -86,7 +86,7 @@ export const portfolio = [
             'Security system based in jwt and tokens',
             'Testing with junit and spring for Java',
             'Testing with vitest, msw, and react testing library for Javascript',
-            '<span>Components with <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">Storybook</a></span><small>❗ Caution: Storybook has problems with the mobile version</small>',
+            '<span>Components, and pages with interaction tests with <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">Storybook</a></span><small>❗ Caution: Storybook has problems with the mobile version</small>',
             'Api documentation using <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">swagger</a>',
             'Documentation with JSDoc and Javadoc'
          ]
