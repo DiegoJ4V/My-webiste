@@ -1,4 +1,4 @@
-import { aboutContainers, languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, portfolioContainer, technologiesContainers } from './code/selectors.js';
+import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, technologiesContainers } from './code/selectors.js';
 import { textByLanguage } from './code/textGenerator.js';
 
 const userLang = localStorage.getItem('language') ?? navigator.language;
@@ -8,11 +8,10 @@ if (userLang.includes('es')) {
 }
 
 function isInViewport(element) {
-   const rect = element.getBoundingClientRect();
+   const rect = element?.getBoundingClientRect?.();
    return (
-      rect.top >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 200
-
+      rect?.top >= 0 &&
+      rect?.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100
    );
 }
 
@@ -21,7 +20,7 @@ function isAnimate(element) {
 }
 
 document.addEventListener('scroll', () => {
-   const containers = [...portfolioContainer, ...technologiesContainers, ...aboutContainers];
+   const containers = [...technologiesContainers];
    containers.forEach((element) => {
       if (isInViewport(element) && isAnimate(element)) {
          element.classList.add('animate-pop-in');

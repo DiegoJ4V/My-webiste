@@ -1,4 +1,4 @@
-export const portfolioContainer = document.querySelectorAll('.portfolio-container--card');
+export const portfolioContainer = document.querySelector('.portfolio-container--card');
 export const technologiesContainers = document.querySelectorAll('.main-technologies-container article');
 export const aboutContainers = document.querySelectorAll('.main-about-container article');
 

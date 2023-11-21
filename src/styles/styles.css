@@ -235,6 +235,7 @@ header {
    & .portfolio-container--card {
       container: portfolio-card / inline-size;
       width: 100%;
+      min-width: 288px;
       max-width: calc(75ch + 75ch);
       height: auto;
       border-radius: 12px;
