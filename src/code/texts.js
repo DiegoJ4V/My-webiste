@@ -95,18 +95,3 @@ export const portfolio = [
       }
    },
 ];
-
-export const altImages = {
-   es: [
-      'Diseño responsivo',
-      'Backend',
-      'Sistema de diseño',
-      portfolio[0].es.altImage,
-   ],
-   en: [
-      'Responsive design',
-      'Backend',
-      'Design System',
-      portfolio[0].en.altImage,
-   ]
-};

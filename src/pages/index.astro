@@ -1,0 +1,31 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Header from "../components/Header.astro";
+import PortfolioCard from "../components/PortfolioCard.astro";
+import TechContainer from "../components/TechContainer.astro";
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Diego G. H. | Portfolio</title>
+   <link rel="icon" href="./src/assets/big-svg/page-icon.svg" type="image/svg+xml" />
+   <link rel="stylesheet" href="./src/styles/styles.css">
+   <script src="./src/index.js" type="module"></script>
+</head>
+<body>
+   <Navbar />
+   <Header />
+   <main>
+      <section class="main-portfolio-container" id="portfolio">
+         <h2 class="portfolio-container--title">Portfolio</h2>
+         <PortfolioCard />
+      </section>
+      <TechContainer />
+   </main>
+</body>
+</html>

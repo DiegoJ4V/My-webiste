@@ -1,5 +1,5 @@
-import { deskNav, headerParagraph, headerReply, images, languageOption, languageSelector, mobNav, projectDesc, projectFeatures, projectFeaturesTitle, projectTechTitle, techTitle } from './selectors.js';
-import { altImages, portfolio, textPrincipal } from './texts.js';
+import { deskNav, headerParagraph, headerReply, languageOption, languageSelector, mobNav, projectDesc, projectFeatures, projectFeaturesTitle, projectTechTitle, techTitle } from './selectors.js';
+import { portfolio, textPrincipal } from './texts.js';
 
 const languageVariables = {
    es: [
@@ -54,18 +54,4 @@ export function textByLanguage(preferLanguage) {
    projectTechTitle.textContent = portfolioText.specTech;
 
    techTitle.textContent = textLanguage.technologies;
-
-   altIterator(preferLanguage);
-}
-
-function altIterator(altLanguage) {
-   let altText;
-   if (altLanguage.includes('es')) {
-      altText =  altImages.es;
-   } else {
-      altText = altImages.en;
-   }
-   for (let i = 0; i < altText.length; i++) {
-      images[i].alt = altText[i];
-   }
 }

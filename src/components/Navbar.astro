@@ -1,0 +1,165 @@
+<nav>
+   <div class="navbar--desktop">
+      <ul class="navbar--desktop__menu">
+         <li>
+            <a href="#presentation">Presentation</a>
+         </li>
+         <li>
+            <a href="#portfolio">Portfolio</a>
+         </li>
+         <li>
+            <a href="#technologies">Technologies</a>
+         </li>
+      </ul>
+   </div>
+   <div class="navbar--mobile">
+      <button aria-label="Navbar">
+         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18H34V14H6V18ZM6 26H34V22H6V26ZM6 34H34V30H6V34ZM38 34H42V30H38V34ZM38 14V18H42V14H38ZM38 26H42V22H38V26Z" fill="black"/>
+         </svg>            
+      </button>
+      <ul class="navbar--mobile__menu inactive">
+         <li>
+            <a href="#presentation">Presentation</a>
+         </li>
+         <li>
+            <a href="#portfolio">Portfolio</a>
+         </li>
+         <li>
+            <a href="#technologies">Technologies</a>
+         </li>
+      </ul>
+   </div>
+   <div class="navbar--language--selector">
+      <div>
+         <button class="language--selector--selected">
+            English             
+         </button>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="black"/>
+         </svg>  
+      </div>
+      <button class="language--selector--option inactive" aria-hidden="true">
+         Spanish
+      </button>
+   </div>
+</nav>
+
+<style>
+   nav {
+      display: flex;
+      width: 100%;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      justify-content: center;
+      align-items: center;
+      background: var(--white);
+      border-bottom: 4px solid var(--black);
+      & button {
+         background: white;
+      }
+      & .navbar--desktop {
+         display: none;
+      }
+      & .navbar--mobile {
+         width: 100%;
+         height: 48px;
+         & button {
+            cursor: pointer;
+            border-style: none;
+         }
+         & svg {
+            margin-left: 12px;
+         }
+         & .navbar--mobile__menu {
+            position: absolute;
+            width: 80%;
+            height: 100vh;
+            top: 60px;
+            left: 0;
+            padding-left: 24px;
+            padding-top: 36px;   
+            background: var(--white);
+            border-right: 4px solid var(--black);
+            border-bottom: 4px solid var(--black);
+            & li {
+               margin-bottom: 28px;
+            }
+            & a {
+               text-decoration: none;
+               font-size: 3.6rem;
+               color: var(--black);
+            }
+            & a:hover, a:focus {
+               outline: none;
+               text-decoration: underline;
+            }
+         }
+      }
+      & .navbar--language--selector {
+         & div {
+            display: flex;
+            flex-direction: row;
+         }
+         & .language--selector--selected {
+            display: flex;
+            flex-direction: row;
+            border-style: none;
+            align-items: center;
+         }
+         & .language--selector--selected:hover,  .language--selector--selected:focus {
+            outline: none;
+            text-decoration: underline;
+            cursor: pointer;
+         }
+         & .language--selector--option {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            top: 60px;
+            right: 0;
+            border: var(--border-light);
+            box-shadow: -4px 4px 0 var(--black);
+         }
+         & .language--selector--option:hover, .language--selector--option:focus {
+            text-decoration: underline;
+            cursor: pointer;
+         }
+      }
+   }
+
+   @media (width > 680px) {
+      nav {
+         justify-content: end;
+         align-items: center;
+         & .navbar--desktop {
+            display: flex;
+            & ul {
+               display: flex;
+               margin-right: 12px;
+               gap: 24px;
+               & li {
+                  display: inline;
+                  font-size: 1.6rem;
+               }
+            }
+            & a {
+               color: black;
+               text-decoration: none;
+            }
+            & a:hover, a:focus {
+               outline: none;
+               text-decoration: underline;
+            }
+         }
+         & .navbar--language--selector button {
+            font-size: 1.6rem;
+         }
+         & .navbar--mobile {
+            display: none;
+         }
+      }
+   }
+</style>

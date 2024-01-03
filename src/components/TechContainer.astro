@@ -1,0 +1,60 @@
+---
+import TechnologiesCard from "./TechnologiesCard.astro";
+import FirstTechSvg from "./svgs/FirstTechSvg.astro";
+import SecondTechSvg from "./svgs/SecondTechSvg.astro";
+import ThridTechSvg from "./svgs/ThridTechSvg.astro";
+
+const technologies = [{
+   type: "Frontend", 
+   principal: ["React", "Javascript"], 
+   secondary: ["Tailwind", "Vite", "Vitest", "Storybook", "Mock service worker"],
+   svg: FirstTechSvg
+}, {
+   type: "Backend", 
+   principal: ["Spring", "Java"], 
+   secondary: ["JUnit", "Maven", "Gradle", "MySQL", "PostgresSQL", "Docker", "Swagger"],
+   svg: SecondTechSvg
+}, {
+   type: "Others", 
+   secondary: ["Git", "Github", "Github Actions", "CI/CD", "Azure", "Chromatic"],
+   svg: ThridTechSvg
+}]
+
+---
+
+<section class="main-technologies-container" id="technologies">
+   <h2>Technologies</h2>
+   {technologies.map((object, index) => {
+      const Component = object.svg;
+      return <TechnologiesCard index={index} type={object.type} principal={object.principal} secondary={object.secondary} >
+         <Component />
+      </TechnologiesCard>
+   })}
+</section>
+
+<style>
+   .main-technologies-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 0 16px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #F2CCFF;
+      border-bottom: 4px solid var(--black);
+      & h2 {
+         height: 40px;
+         font-size: var(--h2-size);
+         background: var(--purple);
+         margin: var(--h2-margin);
+         padding: var(--h2-padding);
+         border: var(--border-light);
+         box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
+      }
+      svg {
+         max-width: 320px;
+         height: 200px;
+      }
+   }
+</style>
