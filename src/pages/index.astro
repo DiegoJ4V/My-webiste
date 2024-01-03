@@ -14,7 +14,6 @@ import TechContainer from "../components/TechContainer.astro";
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Diego G. H. | Portfolio</title>
    <link rel="icon" href="./src/assets/big-svg/page-icon.svg" type="image/svg+xml" />
-   <link rel="stylesheet" href="./src/styles/styles.css">
    <script src="./src/index.js" type="module"></script>
 </head>
 <body>
@@ -29,3 +28,96 @@ import TechContainer from "../components/TechContainer.astro";
    </main>
 </body>
 </html>
+
+<style is:global>
+   :root {
+      --white: #ffffff;
+      --black: #000000;
+      --orange-300: #FFB587;
+      --yellow: #FFFA80;
+      --purple: #C190FF;
+      --purple-shadow: #C69AFF;
+      --purple-tab: #E9CCFF;
+      --blue: #2f62ff;
+
+      --border-light: 2px solid black;
+      --shadow-light: 4px;
+      --shadow-heavy: 8px;
+
+      --h2-size: 2.4rem;
+      --h2-margin: 18px auto 20px auto;
+      --h2-padding: 6px 12px;
+   }
+
+   * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+   }
+
+   html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+   }
+
+   body {
+      font-family: sans-serif;
+   }
+
+   ul {
+      list-style: none;
+   }
+
+   .inactive {
+      display: none;
+   }
+
+   .main-portfolio-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 0 16px;
+      flex-direction: column;
+      background: #93B4FF;
+      border-bottom: 4px solid var(--black);
+      & h2 {
+         font-size: var(--h2-size);
+         background: var(--blue);
+         margin: var(--h2-margin);
+         padding: var(--h2-padding);
+         border: var(--border-light);
+         box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
+      }
+   }
+
+   @media (prefers-reduced-motion: no-preference) {
+      @keyframes pop-in {
+         0% {
+            transform: scale(.3);
+         }
+         35% {
+            opacity: 1;
+            transform: scale(.3);
+         }
+         50% {
+            transform: scale(.7);
+         }
+         65% {
+            transform: scale(.7);
+         }
+         80% {
+            transform: scale(1.1);
+         }
+         90% {
+            transform: scale(1.1);
+         }
+         100% {
+            opacity: 1;
+            transform: scale(1);
+         }
+      }
+      .animate-pop-in {
+         animation: pop-in .5s ease-out 0s 1 normal forwards running;
+      }
+   }
+</style>
