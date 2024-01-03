@@ -1,5 +1,5 @@
-import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, technologiesContainers } from './code/selectors.js';
-import { textByLanguage } from './code/textGenerator.js';
+import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, technologiesContainers } from './selectors.js';
+import { textByLanguage } from './textGenerator.js';
 
 const userLang = localStorage.getItem('language') ?? navigator.language;
 

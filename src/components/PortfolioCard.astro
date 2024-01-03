@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import bankPageImage from "../assets/BankPage.png";
+
+---
+
 <article class="portfolio-container--card animate-pop-in">
    <div class="portfolio--card--tabs">
       <a class="card--tabs__icon" rel="noreferrer" href="https://github.com/DiegoJ4V/Bank-Account" target="_blank">
@@ -21,7 +27,7 @@
                Single page application, and simulation of bank system deployed in Azure. 
             </p>
          </div>
-         <img src="./src/assets/BankPage.png" alt="Sign in page for bank account">
+         <Image src={bankPageImage} alt="Sign in page for bank account">
       </div>
       <div class="card--content--description">
          <h4>Features:</h4>
