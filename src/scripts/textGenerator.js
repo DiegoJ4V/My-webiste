@@ -17,14 +17,11 @@ const languageVariables = {
 export function textByLanguage(preferLanguage) {
    let textLanguage;
    let textVariables;
-   let portfolioText;
    if (preferLanguage.includes('es')) {
       textLanguage =  textPrincipal.es;
-      portfolioText = portfolio[0].es;
       textVariables = languageVariables.es;
    } else {
       textLanguage = textPrincipal.en;
-      portfolioText = portfolio[0].en;
       textVariables = languageVariables.en;
    }
 
@@ -45,13 +42,27 @@ export function textByLanguage(preferLanguage) {
    headerParagraph[2].textContent = textLanguage.header.to;
    headerParagraph[3].textContent = textLanguage.header.introduction;
    headerReply.textContent = textLanguage.header.email;
-
-   projectDesc.textContent = portfolioText.description;
-   projectFeaturesTitle.textContent = portfolioText.featuresTitle;
-   for (let i = 0; i < projectFeatures.length ; i++) {
-      projectFeatures[i].innerHTML = portfolioText.features[i];
-   }
-   projectTechTitle.textContent = portfolioText.specTech;
-
    techTitle.textContent = textLanguage.technologies;
+
+   textForPortfolio(preferLanguage);
+}
+
+function textForPortfolio(preferLanguage) {
+   for (let i = 0; i < portfolio.length; i++) {
+      let portfolioText;
+      if (preferLanguage.includes('es')) portfolioText = portfolio[i].es;
+      else portfolioText = portfolio[i].en;
+
+      projectDesc[i].textContent = portfolioText.description;
+      projectFeaturesTitle[i].textContent = portfolioText.featuresTitle;
+
+      let pastFeatures = portfolio[i - 1]?.en?.features?.length ?? 0;
+      for (let j = 0; j < portfolioText.features.length ; j++) { 
+         projectFeatures[pastFeatures].innerHTML = portfolioText?.features[j];
+         pastFeatures++;
+      }
+      
+      projectTechTitle[i].textContent = portfolioText.specTech;
+      
+   }
 }

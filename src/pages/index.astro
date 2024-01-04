@@ -1,9 +1,9 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import favicon from "../assets/favicon.svg";
 import Header from "../components/Header.astro";
-import PortfolioCard from "../components/PortfolioCard.astro";
+import Navbar from "../components/Navbar.astro";
+import PortfolioContainer from "../components/PortfolioContainer.astro";
 import TechContainer from "../components/TechContainer.astro";
-import favicon from "../assets/favicon.svg"
 
 ---
 
@@ -21,10 +21,7 @@ import favicon from "../assets/favicon.svg"
    <Navbar />
    <Header />
    <main>
-      <section class="main-portfolio-container" id="portfolio">
-         <h2 class="portfolio-container--title">Portfolio</h2>
-         <PortfolioCard />
-      </section>
+      <PortfolioContainer />
       <TechContainer />
    </main>
 </body>
@@ -71,24 +68,6 @@ import favicon from "../assets/favicon.svg"
 
    .inactive {
       display: none;
-   }
-
-   .main-portfolio-container {
-      width: 100%;
-      height: auto;
-      display: flex;
-      padding: 0 16px;
-      flex-direction: column;
-      background: #93B4FF;
-      border-bottom: 4px solid var(--black);
-      & h2 {
-         font-size: var(--h2-size);
-         background: var(--blue);
-         margin: var(--h2-margin);
-         padding: var(--h2-padding);
-         border: var(--border-light);
-         box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
-      }
    }
 
    @media (prefers-reduced-motion: no-preference) {

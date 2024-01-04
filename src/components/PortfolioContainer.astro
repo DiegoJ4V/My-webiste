@@ -1,0 +1,61 @@
+---
+import PortfolioCard from "./PortfolioCard.astro";
+import bankPageImage from "../assets/BankPage.png";
+
+const portfolioContent = [{
+   repository: "https://github.com/DiegoJ4V/Bank-Account",
+   link: { name: "https://bank-account", url: "https://jolly-pond-019ae8010.4.azurestaticapps.net/" },
+   title: "Bank account",
+   description: "Single page application, and simulation of bank system deployed in Azure.",
+   imgParameters: { img: bankPageImage, alt: "Sign in page for bank account"},
+   features: ["Material design", "Transactions system, and the ability to automate them", "A responsive design with light and dark mode",
+      "Translation for English and Spanish language", "Security system based in jwt and tokens", "CI/CD with github actions", 
+      "Testing with junit and spring for Java", "Testing with vitest, msw, and react testing library for Javascript", 
+      '<span>Components, and pages with interaction tests with <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">Storybook</a></span>'
+      + '<br /><small>❗ Caution: Storybook has problems with the mobile version</small>', 
+      'Api documentation using <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">swagger</a>',
+      "Documentation with JSDoc and Javadoc"
+   ],
+   technologies: ["Javascript ES6+", "React 18", "Tailwind", "Storybook", "Vite", "Vitest", "Mock service worker", "JSDoc", "Java 17", "Spring 2.7", "Swagger",
+      "Gradle", "PostgresSQL", "Docker", "JUnit", "Javadoc", "Azure", "Github Actions", "Chromatic"], 
+}, {
+   repository: "https://github.com/DiegoJ4V/Pizza-App",
+   link: { name: "https://wip-pizza-service", url: "" },
+   title: "Pizza service",
+   description: "This ongoing project focuses on crafting a comprehensive pizza ordering website built as a Multi-Page Application (MPA).",
+   features: ["The primary objective is to utilize React, Astro, and Typescript for frontend development, offering a seamless and engaging user experience",
+      "Backend operations are being developed using Spring Framework, Java, PostgreSQL, and Docker to ensure secure and efficient handling of orders and customer data",
+      "Coupled with CI/CD pipelines through GitHub Actions, aims to streamline development processes"
+   ],
+   technologies: ["Typescript", "Astro", "React 18", "Vite", "Vitest", "Mock service worker", "Java 21", "Spring 3.2", "Maven", "MySQL", 
+      "Docker", "JUnit", "Github Actions"], 
+}]
+
+
+
+---
+
+<section class="main-portfolio-container" id="portfolio">
+   <h2 class="portfolio-container--title">Portfolio</h2>
+   {portfolioContent.map((content) => <PortfolioCard {...content} />)}
+</section>
+
+<style>
+   .main-portfolio-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 0 16px;
+      flex-direction: column;
+      background: #93B4FF;
+      border-bottom: 4px solid var(--black);
+      & h2 {
+         font-size: var(--h2-size);
+         background: var(--blue);
+         margin: var(--h2-margin);
+         padding: var(--h2-padding);
+         border: var(--border-light);
+         box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
+      }
+   }
+</style>

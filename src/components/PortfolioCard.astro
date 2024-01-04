@@ -1,90 +1,58 @@
 ---
 import { Image } from "astro:assets";
-import bankPageImage from "../assets/BankPage.png";
+import GithubIcon from "./icons/GithubIcon.astro"
+import RedirectIcon from "./icons/RedirectIcon.astro"
+
+const { repository, link, title, description, imgParameters, features, technologies } = Astro.props;
 
 ---
 
 <article class="portfolio-container--card animate-pop-in">
    <div class="portfolio--card--tabs">
-      <a class="card--tabs__icon" rel="noreferrer" href="https://github.com/DiegoJ4V/Bank-Account" target="_blank">
-         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 14.42 2.87 18.17 6.84 19.5C7.34 19.58 7.5 19.27 7.5 19V17.31C4.73 17.91 4.14 15.97 4.14 15.97C3.68 14.81 3.03 14.5 3.03 14.5C2.12 13.88 3.1 13.9 3.1 13.9C4.1 13.97 4.63 14.93 4.63 14.93C5.5 16.45 6.97 16 7.54 15.76C7.63 15.11 7.89 14.67 8.17 14.42C5.95 14.17 3.62 13.31 3.62 9.5C3.62 8.39 4 7.5 4.65 6.79C4.55 6.54 4.2 5.5 4.75 4.15C4.75 4.15 5.59 3.88 7.5 5.17C8.29 4.95 9.15 4.84 10 4.84C10.85 4.84 11.71 4.95 12.5 5.17C14.41 3.88 15.25 4.15 15.25 4.15C15.8 5.5 15.45 6.54 15.35 6.79C16 7.5 16.38 8.39 16.38 9.5C16.38 13.32 14.04 14.16 11.81 14.41C12.17 14.72 12.5 15.33 12.5 16.26V19C12.5 19.27 12.66 19.59 13.17 19.5C17.14 18.16 20 14.42 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0Z" fill="black"/>
-         </svg>   
+      <a class="card--tabs__icon" rel="noreferrer" href={repository} target="_blank">
+         <GithubIcon />
          Github                  
       </a>
-      <a class="card--tabs__icon" rel="noreferrer" href="https://jolly-pond-019ae8010.4.azurestaticapps.net/" target="_blank">
-         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 4H3C2.46957 4 1.96086 4.21071 1.58579 4.58579C1.21071 4.96086 1 5.46957 1 6V15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H12C12.5304 17 13.0391 16.7893 13.4142 16.4142C13.7893 16.0391 14 15.5304 14 15V10M7 11L17 1M17 1H12M17 1V6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-         </svg>                        
-         https://bank-account
-      </a>
+      {link.url ? 
+         <a class="card--tabs__icon" rel="noreferrer" href={link.url} target="_blank">
+            <RedirectIcon />                     
+            {link.name}
+         </a> : 
+         <p class="card--tabs__icon">
+            <RedirectIcon />                       
+            {link.name}
+         </p>
+      }
    </div>
    <div class="portfolio--card--content">
       <div class="card--content--presentation">
          <div>
-            <h3>Bank account</h3>
-            <p>
-               Single page application, and simulation of bank system deployed in Azure. 
-            </p>
+            <h3>{title}</h3>
+            <p>{description}</p>
          </div>
-         <Image src={bankPageImage} alt="Sign in page for bank account">
+         {imgParameters !== undefined ? <Image src={imgParameters.img} alt={imgParameters.alt} /> : null}
       </div>
       <div class="card--content--description">
          <h4>Features:</h4>
          <ul class="content--description--list">
-            <li>Material design</li>
-            <li>Transactions system, and the ability to automate them</li>
-            <li>A responsive design with light and dark mode</li>
-            <li>Translation for English and Spanish language</li>
-            <li>Security system based in jwt and tokens</li>
-            <li>CI/CD with github actions</li>
-            <li>Testing with junit and spring for Java</li>
-            <li>Testing with vitest, msw, and react testing library for Javascript</li>
-            <li>
-               <span>
-                  Components, and pages with interaction tests with <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">Storybook</a>
-               </span>
-               <small>❗ Caution: Storybook has problems with the mobile version</small>
-            </li>
-            <li>
-               Api documentation using <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">swagger</a>
-            </li>
-            <li>Documentation with JSDoc and Javadoc</li>
+            {features.map((feature) => <li set:html={`- ${feature}`}></li>)}
          </ul>
       </div>
       <div class="card--content--technologies">
          <h4>Technologies used:</h4>
          <ul class="content--technologies--list">
-            <li>Javascript ES6+</li>
-            <li>React 18</li>
-            <li>Tailwind</li>
-            <li>Storybook</li>
-            <li>Vite</li>
-            <li>Vitest</li>
-            <li>Mock service worker</li>
-            <li>JSDoc</li>
-            <li>Java 17
-            <li>Spring 2.7</li>
-            <li>Swagger</li>
-            <li>Gradle</li>
-            <li>PostgresSQL</li>
-            <li>Docker</li>
-            <li>JUnit</li>
-            <li>Javadoc</li>
-            <li>Azure</li>
-            <li>Github Actions</li>
-            <li>Chromatic</li>
-            </ul>
+            {technologies.map((tech) => <li>{tech}</li>)}
+         </ul>
       </div>
    </div>
 </article>
 
-<style>
+<style is:global>
    .portfolio-container--card {
       container: portfolio-card / inline-size;
       width: 100%;
       min-width: 288px;
-      max-width: calc(75ch + 75ch);
+      max-width: calc(80ch + 80ch);
       height: auto;
       border-radius: 12px;
       margin: 0 auto 32px auto;
@@ -118,12 +86,21 @@ import bankPageImage from "../assets/BankPage.png";
             & svg {
                margin-right: 4px;
             }
+            & svg:nth-child(1) {
+               stroke: black;
+            }
+         }
+         & .card--tabs__icon:not(a) {
+            color: gray;
+            & svg:nth-child(1) {
+               stroke: grey;
+            }
          }
          & .card--tabs__icon:nth-child(2) {
             width: 100%;
             margin-right: 10px;
          }
-         & .card--tabs__icon:hover, .card--tabs__icon:focus {
+         & .card--tabs__icon:hover:not(p), .card--tabs__icon:focus:not(p) {
             outline: none;
             text-decoration: underline;
             box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
@@ -163,8 +140,9 @@ import bankPageImage from "../assets/BankPage.png";
                width: 100%;
                max-width: 340px;
                text-align: center;
+               text-wrap: balance;
                font-size: 1.4rem;
-               line-height: 1.4;
+               line-height: 2.8rem;
                padding: 0 18px;
                margin-bottom: 12px;
             }
@@ -181,13 +159,14 @@ import bankPageImage from "../assets/BankPage.png";
             flex-direction: column;
             gap: 8px;
             margin: 0 16px 12px 16px;
-            list-style: disc;
-            list-style-position: inside;
             & li {
                font-size: 1.4rem;
-               & small {
-                  display: inline-block;
-               }
+               line-height: 2.4rem;
+               text-wrap: balance;
+            }
+            & small {
+               display: block;
+               width: 100%;
             }
          }
          & .content--technologies--list {
@@ -223,6 +202,7 @@ import bankPageImage from "../assets/BankPage.png";
             & .card--content--description {
                grid-row: 1 / 2;
                grid-column: 2 / 3;
+               margin-top: 24px;
             }
             & .card--content--technologies {
                grid-row: 2 / 3;

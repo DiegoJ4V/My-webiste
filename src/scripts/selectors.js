@@ -15,10 +15,10 @@ export const languageOption = document.querySelector('.language--selector--optio
 export const headerParagraph = document.querySelectorAll('header p');
 export const headerReply = document.querySelector('.contact__email');
 
-export const projectDesc = document.querySelector('.card--content--presentation p');
-export const projectFeaturesTitle = document.querySelector('.card--content--description h4');
+export const projectDesc = document.querySelectorAll('.card--content--presentation p');
+export const projectFeaturesTitle = document.querySelectorAll('.card--content--description h4');
 export const projectFeatures = document.querySelectorAll('.card--content--description li');
-export const projectTechTitle = document.querySelector('.card--content--technologies h4');
+export const projectTechTitle = document.querySelectorAll('.card--content--technologies h4');
 
 export const techTitle = document.querySelector('.main-technologies-container h2');
 
