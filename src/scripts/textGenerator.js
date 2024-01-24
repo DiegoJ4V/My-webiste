@@ -1,4 +1,5 @@
-import { deskNav, headerParagraph, headerReply, languageOption, languageSelector, mobNav, projectDesc, projectFeatures, projectFeaturesTitle, projectTechTitle, techTitle } from './selectors.js';
+import { closeModalButton, deskNav, headerParagraph, headerReply, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectFeatures, 
+   projectFeaturesTitle, projectTechTitle, showModalButton, techTitle } from './selectors.js';
 import { portfolio, textPrincipal } from './texts.js';
 
 const languageVariables = {
@@ -41,11 +42,18 @@ export function textByLanguage(preferLanguage) {
    headerParagraph[1].textContent = textLanguage.header.from;
    headerParagraph[2].textContent = textLanguage.header.to;
    headerParagraph[3].textContent = textLanguage.header.introduction;
+   headerParagraph[4].textContent = textLanguage.header.about;
    headerReply.textContent = textLanguage.header.email;
+
+   portfolioTitle.textContent = textLanguage.portfolio;
+   showModalButton.forEach((button) => button.textContent = textLanguage.modal.show);
+   closeModalButton.forEach((button) => button.textContent = textLanguage.modal.close);
+
    techTitle.textContent = textLanguage.technologies;
 
    textForPortfolio(preferLanguage);
 }
+
 
 function textForPortfolio(preferLanguage) {
    for (let i = 0; i < portfolio.length; i++) {
@@ -62,7 +70,6 @@ function textForPortfolio(preferLanguage) {
          pastFeatures++;
       }
       
-      projectTechTitle[i].textContent = portfolioText.specTech;
-      
+      projectTechTitle[i].textContent = portfolioText.specTech;      
    }
 }

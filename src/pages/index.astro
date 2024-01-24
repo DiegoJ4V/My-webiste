@@ -12,7 +12,7 @@ import TechContainer from "../components/TechContainer.astro";
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta http-equiv="Refresh" content="0; URL=https://my-website-dgh.pages.dev/" />
+   <!-- <meta http-equiv="Refresh" content="0; URL=https://my-website-dgh.pages.dev/" /> -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="Diego Guadarrama Hernández website to showcase his abilities as Full Stack web developer in React and Spring">
    <title>Diego G. H. | Portfolio</title>
@@ -68,8 +68,33 @@ import TechContainer from "../components/TechContainer.astro";
       list-style: none;
    }
 
+   p, li {
+      text-wrap: pretty;
+   }
+
    .inactive {
       display: none;
+   }
+
+   & .clickeable--container {
+      display: flex;
+      background: var(--white);
+      border: 2px solid var(--black);
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--black);
+      align-items: center;
+      transition: box-shadow 0.5s;
+   }
+   & .clickeable--container:hover, .clickeable--container:focus {
+      outline: none;
+      text-decoration: underline;
+      cursor: pointer;
+      box-shadow: var(--shadow-light) var(--shadow-light) 0 var(--black);
+      transition: box-shadow 0.5s;
    }
 
    @media (prefers-reduced-motion: no-preference) {

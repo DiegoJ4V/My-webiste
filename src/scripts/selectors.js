@@ -1,4 +1,4 @@
-export const portfolioContainer = document.querySelector('.portfolio-container--card');
+export const portfolioContainer = document.querySelectorAll('.portfolio-container--card');
 export const technologiesContainers = document.querySelectorAll('.main-technologies-container article');
 export const aboutContainers = document.querySelectorAll('.main-about-container article');
 
@@ -19,7 +19,10 @@ export const projectDesc = document.querySelectorAll('.card--content--presentati
 export const projectFeaturesTitle = document.querySelectorAll('.card--content--description h4');
 export const projectFeatures = document.querySelectorAll('.card--content--description li');
 export const projectTechTitle = document.querySelectorAll('.card--content--technologies h4');
+export const showModalButton = document.querySelectorAll('.show');
+export const closeModalButton = document.querySelectorAll('.close');
 
+export const portfolioTitle = document.querySelector('.main-portfolio-container h2');
 export const techTitle = document.querySelector('.main-technologies-container h2');
 
 export const images = document.querySelectorAll('img');
