@@ -91,10 +91,10 @@ export const portfolio = [
          specTech: 'Tecnologías usadas:',
          featuresTitle : 'Características',
          features: [
+            'Desarrollando componentes utilizando Typescript, Astro, React y Vite para un desarrollo robusto',
+            'Utilizando Vitest y Mock Service Worker para pruebas unitarias exhaustivas, y Cypress para pruebas e2e',
             'Trabajando con Java 21, Spring 3.2, Maven, MySQL y Docker para soluciones backend resilientes',
             'Realizando estrictas pruebas unitarias con JUnit y Mockito para la validación de código backend, asegurando la calidad del código',
-            'Desarrollando componentes utilizando Typescript, Astro, React y Vite para un desarrollo robusto',
-            'Utilizando Vitest y Mock Service Worker para pruebas unitarias exhaustivas, y Cypress para pruebas e2e'
          ]
       },
       en: {
