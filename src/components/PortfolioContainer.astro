@@ -1,50 +1,31 @@
 ---
 import PortfolioCard from './PortfolioCard.astro';
 import bankPageImage from '../assets/BankPage.png';
+import { portfolio, principalText } from "../scripts/texts"
 
 const portfolioContent = [{
    repository: 'https://github.com/DiegoJ4V/Bank-Account',
    link: { name: 'https://bank-account', url: 'https://jolly-pond-019ae8010.4.azurestaticapps.net/' },
    title: 'Bank account',
-   description: 'Developed a sophisticated SPA Bank System prioritizing user experience and reliability through stringent testing and secure backend architecture.'
-      + ' Successfully managed cloud deployment, ensuring optimal performance and accessibility for users, while providing a visually engaging interface.',
+   description: portfolio[0].en.description,
    imgParameters: { img: bankPageImage, alt: 'Sign in page for bank account'},
-   features: [
-      'Developed 13 components, and 11 pages using JavaScript with React',
-      'Applied modern styles, accessibility and a great feedback thanks to the Material Design principles, utilizing tailwind, and CSS for develop that styles',
-      'Developed an API with 21 endpoints, and secured with role access control and JSON Web Token, using Spring Boot with Java and Gradle to develop it, and PostgreSQL to handle the data',
-      'API documented with Swagger (Showcase <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">here</a>), and containerized using Docker',
-      'Managed all 13 components in isolation with Storybook, ensuring accessibility, interaction testing, and end-to-end (E2E) testing across all 11 pages facilitated by MSW (Mock Service Worker).'
-      +' Showcase <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">here</a> (⚠ careful with mobile version, Storybook has a bug with the navigation)',
-      'Utilized Mock Service Worker for API simulation, Vitest (very similar to Jest) and React Testing Library for unit and integration testing, making +140 test cases, accomplishing +85% of coverage',
-      'Performed +100 test cases utilizing JUnit and Mockito, achieving +75% of coverage for unit tests in the overall project, and integration tests in the database layer using Spring with Hibernate',
-      'Developed 2 CI/CD pipelines to test, build, and deploy the front and the back using GitHub Actions with a special case in the frontend pipeline due to the parallelization technique to improve the overall speed',
-      'Deployed, and managed application on Azure cloud infrastructure, utilizing 4 services: static web app, container registry, app service, and azure database for PostgreSQL',
-   ],
+   features: portfolio[0].en.features,
    technologies: ['Javascript ES6+', 'React 18', 'Tailwind', 'Storybook', 'Vite', 'Vitest', 'Mock service worker', 'JSDoc', 'Java 17', 'Spring 2.7', 'Swagger',
-      'Gradle', 'PostgresSQL', 'Docker', 'JUnit', 'Javadoc', 'Azure', 'Github Actions', 'Chromatic'], 
+      'Gradle', 'PostgresSQL', 'Docker', 'JUnit', 'Javadoc', 'Azure', 'Github Actions', 'Chromatic']
 }, {
    repository: 'https://github.com/DiegoJ4V/Pizza-App',
    link: { name: 'https://wip-pizza-service', url: '' },
    title: 'Pizza service',
-   description: 'This ongoing project focuses on crafting a comprehensive pizza ordering website built as a Multi-Page Application (MPA).'   
-      +' It is currently in progress, aiming to leverage cutting-edge technologies to create an intuitive platform for users to customize and order pizzas online.',
-   features: [
-      'Developing frontend components using Typescript, Astro, React, and Vite for robust frontend development',
-      'Utilizing Vitest and Mock Service Worker for comprehensive frontend testing, and Cypress for e2e tests',
-      'Working with Java 21, Spring 3.2, Maven, MySQL, and Docker for resilient backend solutions',
-      'Conducting stringent JUnit unit tests for backend code validation, ensuring code quality through continuous integration',
-   ],
-   technologies: ['Typescript', 'Astro', 'React 18', 'Vite', 'Vitest', 'Mock service worker', 'Cypress', 'Java 21', 'Spring 3.2', 'Maven', 'MySQL', 
-      'Docker', 'JUnit', 'Github Actions'], 
+   description: portfolio[1].en.description,
+   features: portfolio[1].en.features,
+   technologies: ['Typescript', 'Astro', 'React 18', 'Vite', 'Vitest', 'Mock service worker', 'Playwright', 'Java 21', 'Spring 3.2', 'Maven', 'JUnit', 
+      'Node', 'MySQL', 'Docker', 'Kubernetes', 'Test containers', 'Github Actions']
 }]
-
-
 
 ---
 
 <section class='main-portfolio-container' id='portfolio'>
-   <h2 class='portfolio-container--title'>Portfolio</h2>
+   <h2 class='portfolio-container--title'>{principalText.en.portfolio}</h2>
       {portfolioContent.map((content, index) => <PortfolioCard {...content } />)}
 </section>
 

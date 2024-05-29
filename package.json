@@ -7,13 +7,17 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "wrangler pages deploy dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astro": "4.0.9",
-    "sharp": "0.33.1"
+    "astro": "4.5.8",
+    "sharp": "0.33.2"
+  },
+  "devDependencies": {
+    "wrangler": "3.36.0"
   }
 }

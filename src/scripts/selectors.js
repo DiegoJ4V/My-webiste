@@ -12,6 +12,7 @@ export const navButtons = document.querySelectorAll('.navbar--mobile li a');
 export const languageSelector = document.querySelector('.language--selector--selected');
 export const languageOption = document.querySelector('.language--selector--option');
 
+export const headerContainer = document.querySelector('.header--content-container')
 export const headerParagraph = document.querySelectorAll('header p');
 export const headerReply = document.querySelector('.contact__email');
 

@@ -1,4 +1,4 @@
-import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, technologiesContainers } from './selectors.js';
+import { languageOption, languageSelector, navButtons, navbarIcon, navbarMenu, portfolioContainer, technologiesContainers } from './selectors.js';
 import { textByLanguage } from './textGenerator.js';
 
 const userLang = localStorage.getItem('language') ?? navigator.language;
@@ -7,26 +7,21 @@ if (userLang.includes('es')) {
    textByLanguage('es');
 }
 
-function isInViewport(element) {
-   const rect = element?.getBoundingClientRect?.();
-   return (
-      rect?.top >= 0 &&
-      rect?.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100
-   );
-}
-
 function isAnimate(element) {
    return !element.classList.contains('animate-pop-in');
 }
 
-document.addEventListener('scroll', () => {
-   const containers = [...technologiesContainers];
-   containers.forEach((element) => {
-      if (isInViewport(element) && isAnimate(element)) {
-         element.classList.add('animate-pop-in');
-      }
-   });
-});
+const options = {
+   root: null,
+   rootMargin: '0px',
+   threshold: [0.1, 1.0]
+};
+
+const observer = new IntersectionObserver((entries) => {
+   if (entries[0].isIntersecting && isAnimate(entries[0].target)) entries[0].target.classList.add('animate-pop-in');
+}, options);
+
+[...portfolioContainer, ...technologiesContainers].forEach((element) => observer.observe(element));
 
 navbarIcon.addEventListener('click', () => {
    if (navbarMenu.classList.contains('inactive')) {

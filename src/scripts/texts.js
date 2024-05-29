@@ -1,4 +1,4 @@
-export const textPrincipal = {
+export const principalText = {
    es: {
       nav: {
          presentation: 'Presentación',
@@ -9,8 +9,9 @@ export const textPrincipal = {
       header: {
          from: 'Desde: México',
          to: 'Para: Usted',
-         introduction: 'Buen día',
-         about: 'Me gustaría presentarme formalmente. Soy un desarrollador autodidacta con un enfoque en las aplicaciones web con Java y React. Con un gran confianza en las ultimas tecnologías y el testing para desarrollar aplicaciones solidas y mantenibles con el paso del tiempo.',
+         about__1: 'Autodidacta apasionado por el ecosistema web. Diseñó y desarrolló productos sólidos utilizando soluciones modernas'
+         + ' para todo tipo de necesidades.',
+         about__2: 'Me especializo en Java y React, pero soy una persona sumamente flexible que trabaja acorde a las necesidades del producto.',
          email: 'Responder'
       },
       portfolio: 'Portafolio',
@@ -30,8 +31,8 @@ export const textPrincipal = {
       header: {
          from: 'From: México',
          to: 'To: You',
-         introduction: 'Good day',
-         about: "I would like to formally introduce myself. I'm a self-taught developer with focus on web applications with Java and React. With a great confidence in the latest technologies and testing to develop solid and maintainable applications over time.",
+         about__1: 'Self-taught and passionate about the web ecosystem. I design and develop solid products using modern solutions for all kinds of needs.',
+         about__2: "I'm specialized in Java and React, but I am an extremely flexible person who works according to the needs of the product.",
          email: 'Reply'
       },
       portfolio: 'Portfolio',
@@ -47,54 +48,68 @@ export const portfolio = [
    {
       es: {
          altImage: 'Página de inicio de sesión para bank account',
-         description: 'Desarrolle un sofisticado sistema bancario como SPA (Single Page Application) priorizando la experiencia del usuario y la fiabilidad a través'
-            + 'de pruebas rigurosas y una arquitectura backend segura. Gestionado con éxito el despliegue en la nube, asegurando un rendimiento óptimo y la accesibilidad para los usuarios, al tiempo que proporciona una interfaz visualmente atractiva.',
+         description: 'Cree un sistema de transacciones con la capacidad de automatizarlas, buscarlas con filtros a base del nombre, fecha y tipo de transacción.',
          specTech: 'Tecnologías usadas:',
          featuresTitle : 'Características',
          features: [
-            'Desarrolle 13 componentes, y 11 páginas usando JavaScript con React.',
-            'Aplique estilos modernos, con accesibilidad y una gran retroalimentación gracias a los principios de Material Design, utilizando tailwind, y CSS para desarrollar esos estilos',
-            'Desarrolle una API con 21 endpoints, y asegurado con el control de acceso de rol y JSON Web Token, utilizando Spring Boot con Java 17 y Gradle para desarrollarlo, y PostgreSQL para manejar los datos',
-            'API documentada con Swagger (Muestra <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">aquí</a>), y en contenedor utilizando Docker',
-            'Gestione los 13 componentes de forma aislada con Storybook, asegurando la accesibilidad, las pruebas de interacción y las pruebas de extremo a extremo '
-            + '(E2E) a través de las 11 páginas facilitadas por MSW (Mock Service Worker). Muestra <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">aquí</a> (cuidado con la versión móvil, Storybook tiene un error con la navegación)',
-            'Utilize Mock Service Worker para simulación de API, Vitest (muy similar a Jest) y React Testing Library para pruebas unitarias y de integración, haciendo +140 casos de prueba, logrando +85% de cobertura',
-            'Realize +100 casos de prueba utilizando JUnit y Mockito, logrando +75% de cobertura para pruebas unitarias en el proyecto en general, y pruebas de integración en la capa de base de datos utilizando Spring con Hibernate',
-            'Desarrolle 2 CI/CD pipelines para probar, construir, y desplegar el front y el back usando GitHub Actions con un caso especial en el frontend pipeline debido a la técnica de paralelización para mejorar la velocidad global',
-            'Desplegué y gestione la aplicación en la infraestructura de nube Azure, utilizando 4 servicios: aplicación web estática, registro de contenedores, servicio de aplicaciones y base de datos Azure para PostgreSQL.'
+            'Desarrolle una SPA (Single Page Application) para darle a los usuarios una experiencia dinámica e interactiva usando JavaScript y '
+            + 'React, consiguiendo con ello, un desarrollo sumamente ágil',
+            'Aplique los principios de Material Design con herramientas de estilos tales como: Tailwind y CSS para tener una buena paleta de '
+            + 'colores para el modo claro y oscuro, mejorar la accesibilidad y tener un gran responsive',
+            'Desarrolle una REST API con un sistema de seguridad basado en roles, JSON Web Token (JWT) y tokens. Utilizando Spring Boot, Java 17 y '
+            + 'PostgreSQL para hacer uso del ecosistema tan maduro que tienen y con ello crear una infraestructura sólida',
+            'Documente la API usando Swagger. Muestra <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">aquí</a>',
+            'Utilicé Storybook para poder tener un mejor desarrollo de mis componentes y páginas, gracias a varias de sus herramientas como lo pueden ser: pruebas de accesibilidad,'
+            + ' y de interacción. Muestra <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">aquí</a> '
+            + '(cuidado con la versión móvil, Storybook tiene un error con la navegación)',
+            'Realice decenas de test unitarios tanto para el frontend como para el backend usando sus respectivas librerías, y a su vez múltiples '
+            + 'tests de integración gracias a MSW para poder realizar llamadas a la api desde el apartado de los tests',
+            'Automatice el proceso de pruebas, construcción y despliegue para el Frontend y el Backend, haciendo uso de CI/CD pipelines adaptadas '
+            + 'para GitHub Actions, ahorrando mucho tiempo y asegurando una calidad constante en los despliegues',
+            'Desplegué y gestione la aplicación en la infraestructura de nube Azure, utilizando los servicios: aplicación web estática, registro de contenedores, servicio de aplicaciones y base de datos Azure para PostgreSQL'
          ]
       },
       en: {
          altImage: 'Sign in page for bank account',
-         description: 'Developed a sophisticated SPA Bank System prioritizing user experience and reliability through stringent testing and secure backend architecture.'
-         + ' Successfully managed cloud deployment, ensuring optimal performance and accessibility for users, while providing a visually engaging interface.',
+         description: 'Create a transaction system with the ability to automate transactions, search them with filters based on name, date and type of transaction.',
          specTech: 'Technologies used:',
          featuresTitle : 'Features',
          features: [
-            'Developed 13 components, and 11 pages using JavaScript with React',
-            'Applied modern styles, accessibility and a great feedback thanks to the Material Design principles, utilizing tailwind, and CSS for develop that styles',
-            'Developed an API with 21 endpoints, and secured with role access control and JSON Web Token, using Spring Boot with Java and Gradle to develop it, and PostgreSQL to handle the data',
-            'API documented with Swagger (Showcase <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">here</a>), and containerized using Docker',
-            'Managed all 13 components in isolation with Storybook, ensuring accessibility, interaction testing, and end-to-end (E2E) testing across all 11 pages facilitated by MSW (Mock Service Worker).'
-            +' Showcase <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">here</a> (careful with mobile version, Storybook has a bug with the navigation)',
-            'Utilized Mock Service Worker for API simulation, Vitest (very similar to Jest) and React Testing Library for unit and integration testing, making +140 test cases, accomplishing +85% of coverage',
-            'Performed +100 test cases utilizing JUnit and Mockito, achieving +75% of coverage for unit tests in the overall project, and integration tests in the database layer using Spring with Hibernate',
-            'Developed 2 CI/CD pipelines to test, build, and deploy the front and the back using GitHub Actions with a special case in the frontend pipeline due to the parallelization technique to improve the overall speed',
-            'Deployed, and managed application on Azure cloud infrastructure, utilizing 4 services: static web app, container registry, app service, and azure database for PostgreSQL',
+            'Developed a SPA (Single Page Application) to give users a dynamic and interactive experience using JavaScript and React, achieving with it, a highly agile development',
+            'Applied the principles of Material Design with styling tools such as: Tailwind and CSS to have a good color palette for light and dark mode, improve accessibility and have a great responsive',
+            'Develop a REST API with a role-based security system, JSON Web Token (JWT) and tokens. Using Spring Boot, Java 17 and PostgreSQL '
+            + 'to make use of their mature ecosystem to create a solid infrastructure',
+            'Documented the API using Swagger. Showcase <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">here</a>',
+            'Used Storybook to be able to have a better development of my components and pages, thanks to several of their tools such as: accessibility and'
+            + ' interaction tests. Showcase <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">here</a> '
+            + '(careful with mobile version, Storybook has a bug with the navigation)',
+            'Performed dozens of unit tests for both frontend and backend using their respective libraries, as well as multiple integration tests thanks to '
+            + 'MSW to be able to make calls to the api from the test section',
+            'Automated the testing, build and deployment process for Frontend and Backend, making use of CI/CD pipelines adapted for GitHub Actions, '
+            + 'saving a lot of time and ensuring consistent quality in deployments',
+            'Deployed and managed the application on Azure cloud infrastructure, using the services: static web application, container registry, '
+            + 'application service and Azure database for PostgreSQL',
          ]
       }
    },
    {
       es: {
          description: 'Este proyecto en curso se centra en la creación de un sitio web completo de pedidos de pizza construido como una aplicación multi página (MPA).'
-            + ' Actualmente está en progreso, con el objetivo de aprovechar las tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea',
+            + ' Actualmente está en progreso, con el objetivo de aprovechar las tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea.',
          specTech: 'Tecnologías usadas:',
          featuresTitle : 'Características',
          features: [
-            'Desarrollando componentes utilizando Typescript, Astro, React y Vite para un desarrollo robusto',
-            'Utilizando Vitest y Mock Service Worker para pruebas unitarias exhaustivas, y Cypress para pruebas e2e',
-            'Trabajando con Java 21, Spring 3.2, Maven, MySQL y Docker para soluciones backend resilientes',
-            'Realizando estrictas pruebas unitarias con JUnit y Mockito para la validación de código backend, asegurando la calidad del código',
+            'Desarrollando una aplicación web, centrada en la velocidad de carga y con una gran interactividad, '
+            + 'utilizando técnicas como el SSR (Server Side Rendering) y tecnologías tales como: Typescript, Astro, React y Vite para lograrlo',
+            'Trabajando con Vitest y Mock Service Worker para pruebas unitarias exhaustivas, y Playwright para pruebas e2e',
+            'Trabajando en la creación de un sistema de micro servicios robustos y escalables haciendo uso de tecnologías como Spring, Node y '
+            + 'Mysql para el desarrollo de cada uno de los servicios de la aplicación',
+            'Gestionando los micro servicios con Kubernetes y haciendo uso de sus múltiples funcionalidades, como lo puedes ser: '
+            + 'el descubrimiento de servicios, gateway api, load balancer, dns',
+            'Dirigiendo las pruebas del backend con Junit para las pruebas unitarias, y la tecnología "tests containers" para las pruebas de integración, ' 
+            + 'logrando con ello un desarrollo seguro',
+            'Trabajando con múltiples CI/CD pipelines para automatizar el proceso de pruebas, construcción de imágenes de docker y el '
+            + 'despliegue de las mismas en Kubernetes'
          ]
       },
       en: {
@@ -103,10 +118,16 @@ export const portfolio = [
          specTech: 'Technologies used:',
          featuresTitle : 'Features',
          features: [
-            'Developing frontend components using Typescript, Astro, React, and Vite for robust frontend development',
-            'Utilizing Vitest and Mock Service Worker for comprehensive frontend testing, and Cypress for e2e tests',
-            'Working with Java 21, Spring 3.2, Maven, MySQL, and Docker for resilient backend solutions',
-            'Conducting stringent JUnit unit tests for backend code validation, ensuring code quality through continuous integration',
+            'Developing a web application, focused on loading speed and with a great interactivity, '
+            + 'using techniques such as SSR (Server Side Rendering) and technologies such as: Typescript, Astro, React and Vite to achieve this',
+            'Working with Vitest and Mock Service Worker for comprehensive unit testing, and Playwright for e2e testing',
+            'Creating a robust microservices system to get the benefits of microservices, using Java 21, Spring Boot 3.2, Maven and MySQL',
+            'Managing microservices with Kubernetes and making use of its multiple functionalities, such as: '
+            + 'service discovery, gateway api, load balancer, dns',
+            'Running backend tests with Junit for unit testing, and the "test containers" technology for integration testing, ' 
+            + 'thereby achieving secure development',
+            'Working with multiple CI/CD pipelines to automate the testing process, building docker images and the '
+            + 'deploying them in Kubernetes'
          ]
       }
    },

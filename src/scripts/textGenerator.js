@@ -1,6 +1,6 @@
 import { closeModalButton, deskNav, headerParagraph, headerReply, languageOption, languageSelector, mobNav, portfolioTitle, projectDesc, projectFeatures, 
    projectFeaturesTitle, projectTechTitle, showModalButton, techTitle } from './selectors.js';
-import { portfolio, textPrincipal } from './texts.js';
+import { portfolio, principalText  } from './texts.js';
 
 const languageVariables = {
    es: [
@@ -19,10 +19,10 @@ export function textByLanguage(preferLanguage) {
    let textLanguage;
    let textVariables;
    if (preferLanguage.includes('es')) {
-      textLanguage =  textPrincipal.es;
+      textLanguage =  principalText.es;
       textVariables = languageVariables.es;
    } else {
-      textLanguage = textPrincipal.en;
+      textLanguage = principalText.en;
       textVariables = languageVariables.en;
    }
 
@@ -41,8 +41,8 @@ export function textByLanguage(preferLanguage) {
 
    headerParagraph[1].textContent = textLanguage.header.from;
    headerParagraph[2].textContent = textLanguage.header.to;
-   headerParagraph[3].textContent = textLanguage.header.introduction;
-   headerParagraph[4].textContent = textLanguage.header.about;
+   headerParagraph[3].textContent = textLanguage.header.about__1;
+   headerParagraph[4].textContent = textLanguage.header.about__2;
    headerReply.textContent = textLanguage.header.email;
 
    portfolioTitle.textContent = textLanguage.portfolio;

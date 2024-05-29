@@ -1,3 +1,9 @@
+---
+import { principalText } from '../scripts/texts'
+
+const headerTraductions = principalText.en.header
+---
+
 <header id="presentation">
    <div class="header--title-container">
       <h1>Full Stack Developer | Java, React</h1>
@@ -10,16 +16,16 @@
          </small>
          </span>
       </p>
-      <p class="header--content__receiver">From: México</p>
-      <p class="header--content__receiver">To: You</p>
-      <p class="header--content__presentation">Good day.</p>
-      <p class="header--content__presentation">I would like to formally introduce myself. I'm a self-taught developer with focus on web applications with Java and React. With a great confidence in the latest technologies and testing to develop solid and maintainable applications over time.</p>  
+      <p class="header--content__receiver">{headerTraductions.from}</p>
+      <p class="header--content__receiver">{headerTraductions.to}</p>
+      <p class="header--content__presentation">{headerTraductions.about__1}</p>
+      <p class="header--content__presentation">{headerTraductions.about__2}</p>
       <footer id="contact">
          <a class="clickeable--container" rel="noreferrer" href="mailto:diegoj4v@gmail.com" target="_blank">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M15.8333 15.8334V12.5C15.8333 11.8056 15.5903 11.2153 15.1042 10.7292C14.6181 10.2431 14.0278 10 13.3333 10H5.6875L8.6875 13L7.5 14.1667L2.5 9.16669L7.5 4.16669L8.6875 5.33335L5.6875 8.33335H13.3333C14.4861 8.33335 15.4687 8.7396 16.2812 9.5521C17.0937 10.3646 17.5 11.3472 17.5 12.5V15.8334H15.8333Z" fill="#1C1B1F"/>
             </svg>             
-            <p class="contact__email">Reply</p>
+            <p class="contact__email">{headerTraductions.email}</p>
          </a>
          <a class="clickeable--container" rel="noreferrer" href="https://github.com/DiegoJ4V" target="_blank">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +106,6 @@
             font-style: normal;
             font-weight: normal;
             line-height: 2rem;
-            white-space: pre-line;
          }
       }
       & footer {
@@ -111,6 +116,9 @@
          align-items: flex-start;
          flex-wrap: wrap;
          gap: 8px;
+         .clickeable--container {
+            height: 36px;
+         }
          & svg {
             margin-right: 6px;
          }
