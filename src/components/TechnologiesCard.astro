@@ -1,5 +1,5 @@
 ---
-const { index, type, principal, secondary } =  Astro.props;
+const { index, type, secondary } =  Astro.props;
 
 ---
 
@@ -13,13 +13,16 @@ const { index, type, principal, secondary } =  Astro.props;
             <li class={(type === "Backend") ? "tab--active" : "" } >
                <span>Backend</span>
             </li>
+            <li class={(type === "DevOps") ? "tab--active" : "" } >
+               <span>DevOps</span>
+            </li>
             <li class={(type === "Others") ? "tab--active" : "" }>
                <span>Others</span>
             </li>
          </ul>
       </div>
       <div class="technologies--card--content">
-         {principal ? 
+         <!-- {principal ? 
             <ul class="technologies--content__principal">
                {principal.map((tech, index) => (
                   <li class:list={["content__principal--medium", (index === 0) 
@@ -27,7 +30,7 @@ const { index, type, principal, secondary } =  Astro.props;
                ))}
             </ul>
             : null
-         }
+         } -->
          <ul class="technologies--content__secondary">
             {secondary.map((tech) => <li>{tech}</li>)}
          </ul>

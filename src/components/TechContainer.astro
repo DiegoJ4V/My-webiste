@@ -6,17 +6,19 @@ import ThridTechSvg from "./svgs/ThridTechSvg.astro";
 
 const technologies = [{
    type: "Frontend", 
-   principal: ["React", "Javascript", "Typescript"], 
-   secondary: ["Tailwind", "Vite", "Vitest", "Storybook", "Mock service worker"],
+   secondary: ["React", "Astro", "Javascript", "Typescript", "Tailwind", "Vite", "Vitest", "Storybook", "Mock service worker"],
    svg: FirstTechSvg
 }, {
    type: "Backend", 
-   principal: ["Spring", "Java"], 
-   secondary: ["JUnit", "Maven", "Gradle", "MySQL", "PostgresSQL", "Docker", "Swagger"],
+   secondary: ["Spring", "Java", "Node", "Maven", "Gradle", "MySQL", "PostgresSQL", "Swagger", "JUnit", "Test containers"],
    svg: SecondTechSvg
 }, {
+   type: "DevOps", 
+   secondary: ["AWS", "Google Cloud", "Azure", "Cloudflare", "Kubernetes", "Docker", "Github Actions", "CI/CD"],
+   svg: ThridTechSvg
+}, {
    type: "Others", 
-   secondary: ["Git", "Github", "Github Actions", "CI/CD", "AWS", "Google Cloud", "Azure", "Cloudflare", "Chromatic"],
+   secondary: ["Git", "Github", "Chromatic"],
    svg: ThridTechSvg
 }]
 
@@ -26,7 +28,7 @@ const technologies = [{
    <h2>Technologies</h2>
    {technologies.map((object, index) => {
       const Component = object.svg;
-      return <TechnologiesCard index={index} type={object.type} principal={object.principal} secondary={object.secondary} >
+      return <TechnologiesCard index={index} type={object.type} secondary={object.secondary} >
          <Component />
       </TechnologiesCard>
    })}

@@ -47,6 +47,45 @@ export const principalText = {
 export const portfolio = [
    {
       es: {
+         description: 'Este proyecto en curso se centra en la creación de un sitio web completo de pedidos de pizza construido como una aplicación multi página (MPA).'
+            + ' Actualmente está en progreso, con el objetivo de aprovechar las tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea.',
+         specTech: 'Tecnologías usadas:',
+         featuresTitle : 'Características',
+         features: [
+            'Desarrollando una aplicación web, centrada en la velocidad de carga y con una gran interactividad, '
+            + 'utilizando técnicas como el SSR (Server Side Rendering) y tecnologías tales como: Typescript, Astro, React y Vite para lograrlo',
+            'Trabajando con Vitest y Mock Service Worker para pruebas unitarias exhaustivas, y Playwright para pruebas e2e',
+            'Trabajando en la creación de un sistema de micro servicios robustos y escalables haciendo uso de tecnologías como Spring, Node y '
+            + 'Mysql para el desarrollo de cada uno de los servicios de la aplicación',
+            'Gestionando los micro servicios con Kubernetes y haciendo uso de sus múltiples funcionalidades, como lo puedes ser: '
+            + 'el descubrimiento de servicios, gateway api, load balancer, dns',
+            'Dirigiendo las pruebas del backend con Junit para las pruebas unitarias, y la tecnología "tests containers" para las pruebas de integración, ' 
+            + 'logrando con ello un desarrollo seguro',
+            'Trabajando con múltiples CI/CD pipelines para automatizar el proceso de pruebas, construcción de imágenes de docker y el '
+            + 'despliegue de las mismas en Kubernetes'
+         ]
+      },
+      en: {
+         description: 'This ongoing project focuses on crafting a comprehensive pizza ordering website built as a Multi-Page Application (MPA).'   
+            +' It is currently in progress, aiming to leverage cutting-edge technologies to create an intuitive platform for users to customize and order pizzas online.',
+         specTech: 'Technologies used:',
+         featuresTitle : 'Features',
+         features: [
+            'Developing a web application, focused on loading speed and with a great interactivity, '
+            + 'using techniques such as SSR (Server Side Rendering) and technologies such as: Typescript, Astro, React and Vite to achieve this',
+            'Working with Vitest and Mock Service Worker for comprehensive unit testing, and Playwright for e2e testing',
+            'Creating a robust microservices system to get the benefits of microservices, using Java 21, Spring Boot 3.2, Maven and MySQL',
+            'Managing microservices with Kubernetes and making use of its multiple functionalities, such as: '
+            + 'service discovery, gateway api, load balancer, dns',
+            'Running backend tests with Junit for unit testing, and the "test containers" technology for integration testing, ' 
+            + 'thereby achieving secure development',
+            'Working with multiple CI/CD pipelines to automate the testing process, building docker images and the '
+            + 'deploying them in Kubernetes'
+         ]
+      }
+   },
+   {
+      es: {
          altImage: 'Página de inicio de sesión para bank account',
          description: 'Cree un sistema de transacciones con la capacidad de automatizarlas, buscarlas con filtros a base del nombre, fecha y tipo de transacción.',
          specTech: 'Tecnologías usadas:',
@@ -89,45 +128,6 @@ export const portfolio = [
             + 'saving a lot of time and ensuring consistent quality in deployments',
             'Deployed and managed the application on Azure cloud infrastructure, using the services: static web application, container registry, '
             + 'application service and Azure database for PostgreSQL',
-         ]
-      }
-   },
-   {
-      es: {
-         description: 'Este proyecto en curso se centra en la creación de un sitio web completo de pedidos de pizza construido como una aplicación multi página (MPA).'
-            + ' Actualmente está en progreso, con el objetivo de aprovechar las tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea.',
-         specTech: 'Tecnologías usadas:',
-         featuresTitle : 'Características',
-         features: [
-            'Desarrollando una aplicación web, centrada en la velocidad de carga y con una gran interactividad, '
-            + 'utilizando técnicas como el SSR (Server Side Rendering) y tecnologías tales como: Typescript, Astro, React y Vite para lograrlo',
-            'Trabajando con Vitest y Mock Service Worker para pruebas unitarias exhaustivas, y Playwright para pruebas e2e',
-            'Trabajando en la creación de un sistema de micro servicios robustos y escalables haciendo uso de tecnologías como Spring, Node y '
-            + 'Mysql para el desarrollo de cada uno de los servicios de la aplicación',
-            'Gestionando los micro servicios con Kubernetes y haciendo uso de sus múltiples funcionalidades, como lo puedes ser: '
-            + 'el descubrimiento de servicios, gateway api, load balancer, dns',
-            'Dirigiendo las pruebas del backend con Junit para las pruebas unitarias, y la tecnología "tests containers" para las pruebas de integración, ' 
-            + 'logrando con ello un desarrollo seguro',
-            'Trabajando con múltiples CI/CD pipelines para automatizar el proceso de pruebas, construcción de imágenes de docker y el '
-            + 'despliegue de las mismas en Kubernetes'
-         ]
-      },
-      en: {
-         description: 'This ongoing project focuses on crafting a comprehensive pizza ordering website built as a Multi-Page Application (MPA).'   
-            +' It is currently in progress, aiming to leverage cutting-edge technologies to create an intuitive platform for users to customize and order pizzas online.',
-         specTech: 'Technologies used:',
-         featuresTitle : 'Features',
-         features: [
-            'Developing a web application, focused on loading speed and with a great interactivity, '
-            + 'using techniques such as SSR (Server Side Rendering) and technologies such as: Typescript, Astro, React and Vite to achieve this',
-            'Working with Vitest and Mock Service Worker for comprehensive unit testing, and Playwright for e2e testing',
-            'Creating a robust microservices system to get the benefits of microservices, using Java 21, Spring Boot 3.2, Maven and MySQL',
-            'Managing microservices with Kubernetes and making use of its multiple functionalities, such as: '
-            + 'service discovery, gateway api, load balancer, dns',
-            'Running backend tests with Junit for unit testing, and the "test containers" technology for integration testing, ' 
-            + 'thereby achieving secure development',
-            'Working with multiple CI/CD pipelines to automate the testing process, building docker images and the '
-            + 'deploying them in Kubernetes'
          ]
       }
    },
