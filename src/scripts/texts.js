@@ -97,7 +97,7 @@ export const portfolio = [
             + 'colores para el modo claro y oscuro, mejorar la accesibilidad y tener un gran responsive',
             'Desarrolle una REST API con un sistema de seguridad basado en roles, JSON Web Token (JWT) y tokens. Utilizando Spring Boot, Java 17 y '
             + 'PostgreSQL para hacer uso del ecosistema tan maduro que tienen y con ello crear una infraestructura sólida',
-            'Documente la API usando Swagger. Muestra <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">aquí</a>',
+            'Documente la API usando Swagger. Muestra <a target="_blank" href="https://bank.ordeninginering.com/swagger-ui/index.html#">aquí</a>',
             'Utilicé Storybook para poder tener un mejor desarrollo de mis componentes y páginas, gracias a varias de sus herramientas como lo pueden ser: pruebas de accesibilidad,'
             + ' y de interacción. Muestra <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">aquí</a> '
             + '(cuidado con la versión móvil, Storybook tiene un error con la navegación)',
@@ -118,7 +118,7 @@ export const portfolio = [
             'Applied the principles of Material Design with styling tools such as: Tailwind and CSS to have a good color palette for light and dark mode, improve accessibility and have a great responsive',
             'Develop a REST API with a role-based security system, JSON Web Token (JWT) and tokens. Using Spring Boot, Java 17 and PostgreSQL '
             + 'to make use of their mature ecosystem to create a solid infrastructure',
-            'Documented the API using Swagger. Showcase <a target="_blank" href="https://bankback.azurewebsites.net/swagger-ui/index.html#">here</a>',
+            'Documented the API using Swagger. Showcase <a target="_blank" href="https://bank.ordeninginering.com/swagger-ui/index.html#">here</a>',
             'Used Storybook to be able to have a better development of my components and pages, thanks to several of their tools such as: accessibility and'
             + ' interaction tests. Showcase <a target="_blank" href="https://main--655be6596e99394a8927c77d.chromatic.com/">here</a> '
             + '(careful with mobile version, Storybook has a bug with the navigation)',
