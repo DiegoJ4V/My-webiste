@@ -1,16 +1,20 @@
 ---
 import PortfolioCard from './PortfolioCard.astro';
 import bankPageImage from '../assets/BankPage.png';
-import { portfolio, principalText } from "../scripts/texts"
+import menuPageImage from '../assets/menu-page.jpg';
+import { portfolio, principalText } from "../scripts/texts";
 
 const portfolioContent = [{
    repository: 'https://github.com/diegoghernandez/Ordeninginering',
    link: { name: 'https://ordeninginering.com', url: 'https://ordeninginering.com' },
    title: 'Ordeninginering',
    description: portfolio[0].en.description,
+   imgParameters: { img: menuPageImage, alt: 'Menu page'},
    features: portfolio[0].en.features,
-   technologies: ['Typescript', 'Astro', 'React 18', 'Vite', 'Vitest', 'Mock service worker', 'Playwright', 'Java 21', 'Spring 3.2', 'Maven', 'JUnit', 
-      'Node', 'MySQL', 'Docker', 'Kubernetes', 'Test containers', 'Github Actions']
+   technologies: [
+      'Typescript', 'Astro', 'React 18', 'Vitest', 'Mock service worker', 'Playwright', 'Java 21', 'Spring 3.2', 'Maven', 'JUnit', 
+      'Node', 'MySQL', 'Docker', 'Test containers', 'Kubernetes',  'RDS', 'S3', 'Cloudfront', 'Cloudflare', 'GKE', 'Github Actions'
+   ]
 }, {
    repository: 'https://github.com/diegoghernandez/Bank-Account',
    link: { name: 'https://bank-account.pages.dev/', url: 'https://bank-account.pages.dev/' },
@@ -18,8 +22,10 @@ const portfolioContent = [{
    description: portfolio[1].en.description,
    imgParameters: { img: bankPageImage, alt: 'Sign in page for bank account'},
    features: portfolio[1].en.features,
-   technologies: ['Javascript ES6+', 'React 18', 'Tailwind', 'Storybook', 'Vite', 'Vitest', 'Mock service worker', 'JSDoc', 'Java 17', 'Spring 2.7', 'Swagger',
-      'Gradle', 'PostgresSQL', 'Docker', 'JUnit', 'Javadoc', 'Azure', 'Github Actions', 'Chromatic']
+   technologies: [
+      'Javascript ES6+', 'React 18', 'Tailwind', 'Storybook', 'Vitest', 'Mock service worker', 'Java 17', 'Spring 2.7', 'Swagger',
+      'Gradle', 'PostgresSQL', 'Docker', 'JUnit', 'Javadoc', 'ECS', 'Cloudflare', 'Github Actions', 'Chromatic'
+   ]
 }]
 
 ---
