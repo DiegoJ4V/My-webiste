@@ -6,7 +6,10 @@ import PortfolioContainer from "../components/PortfolioContainer.astro";
 import TechContainer from "../components/TechContainer.astro";
 
 const title = 'Diego G. H. | Portfolio'
-const description = 'Diego Guadarrama Hernández website to showcase his abilities as Full Stack web developer in React and Spring'
+const description = 'Diego Guadarrama Hernández website to showcase his abilities as Full Stack Seveloper in React and Spring'
+const pageUrl = 'https://diego-g-hernandez.pages.dev/'
+const seoImageUrl = 'https://seo.ordeninginering.com/home.jpg'
+
 ---
 
 <!DOCTYPE html>
@@ -20,18 +23,18 @@ const description = 'Diego Guadarrama Hernández website to showcase his abiliti
    <meta name="description" content={description}>
    <meta name='generator' content={Astro.generator} />
 
-   <meta property='og:url' content='https://diego-g-hernandez.pages.dev/'>
+   <meta property='og:url' content={pageUrl}>
    <meta property='og:type' content='website'>
    <meta property='og:title' content={title}>
    <meta property='og:description' content={description}>
-   <meta property='og:image' content='/home.jpg'>
+   <meta property='og:image' content={seoImageUrl}>
 
    <meta name='twitter:card' content='summary_large_image'>
    <meta property='twitter:domain' content='diego-g-hernandez.pages.dev'>
-   <meta property='twitter:url' content='https://diego-g-hernandez.pages.dev/'>
+   <meta property='twitter:url' content={pageUrl}>
    <meta name='twitter:title' content={title}>
    <meta name='twitter:description' content={description}>
-   <meta name='twitter:image' content='/home.jpg'>
+   <meta name='twitter:image' content={seoImageUrl}>
 
 
    <script src="../scripts/index.js"></script>
