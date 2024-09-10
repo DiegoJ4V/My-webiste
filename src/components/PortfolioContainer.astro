@@ -2,15 +2,18 @@
 import PortfolioCard from './PortfolioCard.astro';
 import bankPageImage from '../assets/BankPage.png';
 import menuPageImage from '../assets/menu-page.jpg';
-import { portfolio, principalText } from "../scripts/texts";
+import { getTranslation } from '../scripts/getTranslation'
+
+const portfolioTitle = getTranslation('portfolioTitle')
+const portfolio = getTranslation('portfolio')
+
 
 const portfolioContent = [{
    repository: 'https://github.com/diegoghernandez/Ordeninginering',
    link: { name: 'https://ordeninginering.com', url: 'https://ordeninginering.com' },
    title: 'Ordeninginering',
-   description: portfolio[0].en.description,
+   description: portfolio[0].description,
    imgParameters: { img: menuPageImage, alt: 'Menu page'},
-   features: portfolio[0].en.features,
    technologies: [
       'Typescript', 'Astro', 'React 18', 'Vitest', 'Mock service worker', 'Playwright', 'Java 21', 'Spring 3.2', 'Maven', 'JUnit', 
       'Node', 'MySQL', 'Docker', 'Test containers', 'Kubernetes',  'RDS', 'S3', 'Cloudfront', 'Cloudflare', 'GKE', 'Github Actions'
@@ -19,9 +22,8 @@ const portfolioContent = [{
    repository: 'https://github.com/diegoghernandez/Bank-Account',
    link: { name: 'https://bank-account.pages.dev/', url: 'https://bank-account.pages.dev/' },
    title: 'Bank account',
-   description: portfolio[1].en.description,
+   description: portfolio[1].description,
    imgParameters: { img: bankPageImage, alt: 'Sign in page for bank account'},
-   features: portfolio[1].en.features,
    technologies: [
       'Javascript ES6+', 'React 18', 'Tailwind', 'Storybook', 'Vitest', 'Mock service worker', 'Java 17', 'Spring 2.7', 'Swagger',
       'Gradle', 'PostgresSQL', 'Docker', 'JUnit', 'Javadoc', 'ECS', 'Cloudflare', 'Github Actions', 'Chromatic'
@@ -31,8 +33,8 @@ const portfolioContent = [{
 ---
 
 <section class='main-portfolio-container' id='portfolio'>
-   <h2 class='portfolio-container--title'>{principalText.en.portfolio}</h2>
-      {portfolioContent.map((content, index) => <PortfolioCard {...content } />)}
+   <h2 class='portfolio-container--title'>{portfolioTitle}</h2>
+      {portfolioContent.map((content) => <PortfolioCard {...content } />)}
 </section>
 
 <style>

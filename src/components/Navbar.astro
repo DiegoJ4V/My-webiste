@@ -1,3 +1,7 @@
+---
+import SelectLanguage from "./SelectLanguage.astro"
+---
+
 <nav>
    <div class="navbar--desktop">
       <ul class="navbar--desktop__menu">
@@ -30,19 +34,7 @@
          </li>
       </ul>
    </div>
-   <div class="navbar--language--selector">
-      <div>
-         <button class="language--selector--selected">
-            English             
-         </button>
-         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="black"/>
-         </svg>  
-      </div>
-      <button class="language--selector--option inactive" aria-hidden="true">
-         Spanish
-      </button>
-   </div>
+   <SelectLanguage />
 </nav>
 
 <style>
@@ -62,6 +54,7 @@
       }
       & .navbar--desktop {
          display: none;
+         height: 100%;
       }
       & .navbar--mobile {
          width: 100%;
@@ -98,44 +91,13 @@
             }
          }
       }
-      & .navbar--language--selector {
-         & div {
-            display: flex;
-            flex-direction: row;
-         }
-         & .language--selector--selected {
-            display: flex;
-            flex-direction: row;
-            border-style: none;
-            align-items: center;
-         }
-         & .language--selector--selected:hover,  .language--selector--selected:focus {
-            outline: none;
-            text-decoration: underline;
-            cursor: pointer;
-         }
-         & .language--selector--option {
-            position: absolute;
-            width: 80px;
-            height: 40px;
-            top: 60px;
-            right: 0;
-            border: var(--border-light);
-            box-shadow: -4px 4px 0 var(--black);
-         }
-         & .language--selector--option:hover, .language--selector--option:focus {
-            text-decoration: underline;
-            cursor: pointer;
-         }
-      }
-   }
 
-   @media (width > 680px) {
-      nav {
+      @media (width > 680px) {
          justify-content: end;
          align-items: center;
          & .navbar--desktop {
             display: flex;
+            place-items: center;
             & ul {
                display: flex;
                margin-right: 24px;
@@ -153,9 +115,6 @@
                outline: none;
                text-decoration: underline;
             }
-         }
-         & .navbar--language--selector button {
-            font-size: 1.6rem;
          }
          & .navbar--mobile {
             display: none;

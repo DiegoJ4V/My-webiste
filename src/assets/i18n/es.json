@@ -1,0 +1,28 @@
+{
+	"nav": {
+		"presentation": "Presentación",
+		"portfolio": "Portafolio",
+		"technologies": "Tecnologías",
+		"about": "Acerca de"
+	},
+	"header": {
+		"from": "Desde: México",
+		"to": "Para: Usted",
+		"about__1": "Autodidacta apasionado por el ecosistema web. Diseñó y desarrolló productos sólidos utilizando soluciones modernas para todo tipo de necesidades.",
+		"about__2": "Me especializo en Java y React, pero soy una persona sumamente flexible que trabaja acorde a las necesidades del producto.",
+		"email": "Responder"
+	},
+	"portfolioTitle": "Portafolio",
+	"portfolio": [
+		{
+			"description": "Este proyecto en curso se centra en la creación de un sitio web completo de pedidos de pizza construido como una aplicación multi página (MPA). Actualmente está en progreso, con el objetivo de aprovechar las tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea.",
+			"specTech": "Tecnologías usadas:"
+		},
+		{
+			"altImage": "Página de inicio de sesión para bank account",
+			"description": "Cree un sistema de transacciones con la capacidad de automatizarlas, buscarlas con filtros a base del nombre, fecha y tipo de transacción.",
+			"specTech": "Tecnologías usadas:"
+		}
+	],
+	"technologies": "Tecnologías"
+}

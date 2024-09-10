@@ -37,7 +37,11 @@ const seoImageUrl = 'https://seo.ordeninginering.com/home.jpg'
    <meta name='twitter:image' content={seoImageUrl}>
 
 
-   <script src="../scripts/index.js"></script>
+   <script>
+      import { textByLanguage } from "../scripts/translateElements"
+      textByLanguage()
+   </script>
+   <script src="../scripts/popInAnimation.js"></script>
 </head>
 <body>
    <Navbar />

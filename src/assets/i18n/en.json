@@ -1,0 +1,29 @@
+{
+	"nav": {
+		"presentation": "Presentation",
+		"portfolio": "Portfolio",
+		"technologies": "Technologies",
+		"about": "About"
+	},
+	"header": {
+		"from": "From: México",
+		"to": "To: You",
+		"about__1": "Self-taught and passionate about the web ecosystem. I design and develop solid products using modern solutions for all kinds of needs.",
+		"about__2": "I'm specialized in Java and React, but I am an extremely flexible person who works according to the needs of the product.",
+		"email": "Reply"
+	},
+	"portfolioTitle": "Portfolio",
+	"portfolio": [
+		{
+			"description": "This ongoing project focuses on crafting a comprehensive pizza ordering website built as a Multi-Page Application (MPA). It is currently in progress, aiming to leverage cutting-edge technologies to create an intuitive platform for users to customize and order pizzas online.",
+			"specTech": "Technologies used:",
+			"featuresTitle ": "Features"
+		},
+		{
+			"altImage": "Sign in page for bank account",
+			"description": "Create a transaction system with the ability to automate transactions, search them with filters based on name, date and type of transaction.",
+			"specTech": "Technologies used:"
+		}
+	],
+	"technologies": "Technologies"
+}

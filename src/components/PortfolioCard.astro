@@ -3,13 +3,25 @@ import { Image } from "astro:assets";
 import GithubIcon from "./icons/GithubIcon.astro"
 import RedirectIcon from "./icons/RedirectIcon.astro"
 
-const { repository, link, title, description, imgParameters, features, technologies } = Astro.props;
+interface Props {
+   repository: string
+   link: {
+      url: string
+      name: string
+   }
+   title: string
+   description: string
+   imgParameters: {
+      img: any
+      alt: string
+   }
+   technologies: string[]
+}
 
-const MAXFEATURES = 4
-
+const { repository, link, title, description, imgParameters, technologies } = Astro.props;
 ---
 
-<article class:list={["portfolio-container--card"]}>
+<article class="portfolio-container--card">
    <div class="portfolio--card--tabs">
       <a class="card--tabs__icon" rel="noreferrer" href={repository} target="_blank">
          <GithubIcon />
@@ -27,30 +39,18 @@ const MAXFEATURES = 4
       }
    </div>
    <div class="portfolio--card--content">
-      <div class="card--content--presentation">
-         <div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-         </div>
-         {imgParameters !== undefined ? <Image src={imgParameters.img} alt={imgParameters.alt} /> : null}
-      </div>
-      <div class="card--content--description">
-         <h4>Features:</h4>
-         <ul class="content--description--list">
-            {features.map((feature, index) => (
-               (index < MAXFEATURES) ? <li set:html={feature}></li> : null
-            ))}
-         </ul>
-         {(features.length > MAXFEATURES) ? <button class:list={["clickeable--container", "show"]}>Show more</button> : null}
-         <dialog class:list={["portfolio-container--card", "animate-pop-in"]}>
-            <ul class="content--description--list">
-               {features.map((feature, index) => (
-                  (index >= MAXFEATURES) ? <li set:html={feature}></li> : null
-               ))}
-               <button class:list={["clickeable--container", "close"]}>Close</button>
-            </ul>
-         </dialog>
-      </div>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {imgParameters !== undefined 
+         ? <Image 
+            src={imgParameters.img} 
+            alt={imgParameters.alt}
+            quality="high"
+            widths={[320, 420]}
+            sizes={[320, 420].map((width) => `(max-width: ${width}px) ${width}px`).join(', ')}
+         /> 
+         : null
+      }
       <div class="card--content--technologies">
          <h4>Technologies used:</h4>
          <ul class="content--technologies--list">
@@ -133,145 +133,101 @@ const MAXFEATURES = 4
          }
       }
       & .portfolio--card--content {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         background: var(--white);
-         border-radius: 0 0 12px 12px;
+         display: grid;
+         place-items: center;
+         padding: 16px;
+         gap: 12px;
          border: var(--border-light);
-         & .card--content--presentation {
-            display: flex;
-            width: 100%;
-            max-width: 75ch;
-            height: fit-content;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 12px 0;
-            & img {
-               max-width: 100%;
-               height: auto;
-               object-fit: contain;
-               aspect-ratio: 2 / 1;
-               padding: 0 12px;
-            }
-            & h3 {
-               font-size: clamp(2.4rem, 2.8rem, 3.2rem);
-               margin-left: 16px;
-               margin-bottom: 8px;
-            }
-            & p {
-               width: 100%;
-               max-width: 340px;
-               font-size: clamp(1.4rem, 1.6rem, 1.8rem);
-               line-height: 2.4rem;
-               padding: 0 18px;
-               margin-bottom: 12px;
-            }
+         border-radius: 0 0 12px 12px;
+         background: var(--white);
+
+         & h3 {
+            font-size: clamp(2.4rem, calc(2vw + 0.5rem), 3.2rem);
          }
+
+         & p {
+            width: 100%;
+            max-width: 50ch;
+            font-size: clamp(1.4rem, calc(2vw + 0.5rem), 1.8rem);
+            line-height: 2.4rem;
+         }
+
+         & img {
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+         }
+
          & h4 {
-            padding: 0 18px;
-            font-size: 1.6rem;
-            margin-bottom: 12px;
+            font-size: clamp(1.6rem, calc(2vw + 0.5rem), 2rem);
             text-decoration: underline;
          }
-         & button {
-            margin: 0 24px 16px auto;
-         }
-         & dialog {
-            width: calc(100% - 24px);
-            max-width: 80ch;
-            padding: 24px;
-            margin: auto;
-            & .content--description--list {
-               margin: 0;
-            }
-            & button {
-               margin-bottom: 0;
-            }
-         }
-         & .content--description--list {
-            display: flex;
-            max-width: 80ch;
-            flex-direction: column;
-            gap: 8px;
-            margin: 0 16px 12px 16px;
-            list-style: disc;
-            & li {
-               font-size: clamp(1.4rem, 1.6rem, 1.8rem);
-               line-height: 2.4rem;
-               margin-left: 16px;
-            }
-            & small {
-               display: block;
-               width: 100%;
-            }
-         }
-         & .content--technologies--list {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 8px 4px;
-            margin: 0 16px 12px 16px;
-            & li {
-               display: inline;
-               font-size: clamp(1.4rem, 1.6rem, 1.8rem);
-               border-radius: 12px;
-               background: var(--white);
-               border: 1px solid var(--black);
-               padding: 4px 8px;
+         
+         & .card--content--technologies {
+            display: grid;
+            gap: 12px;
+
+            & .content--technologies--list {
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+               gap: 8px 4px;
+   
+               & li {
+                  display: inline;
+                  font-size: clamp(1.4rem, 1.6rem, 1.8rem);
+                  border-radius: 12px;
+                  background: var(--white);
+                  border: 1px solid var(--black);
+                  padding: 4px 8px;
+               }
             }
          }
       }
+
       @container portfolio-card (width > 820px) {
          & .portfolio--card--content {
-            display: grid;
             height: fit-content;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr auto;
-            & .card--content--presentation {
-               grid-row: 1 / 2;
-               grid-column: 1 / 2;
-               & img {
-                  height: 260px;
-                  aspect-ratio: 2 / 1;
-               }
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+               "title image"
+               "presentation image"
+               "technologies technologies";
+            place-items: start;
+            row-gap: 16px;
+
+            & h3 {
+               grid-area: title;
+               align-self: flex-end;
             }
-            & .card--content--description {
-               grid-row: 1 / 2;
-               grid-column: 2 / 3;
-               margin-top: 24px;
+
+            & p {
+               grid-area: presentation;
             }
+
+            & img {
+               grid-area: image;
+            }
+
             & .card--content--technologies {
-               grid-row: 2 / 3;
-               grid-column: 1 / 3;
+               grid-area: technologies;
             }
          }
       }
    }
 
    @media (width > 680px) {
-      .portfolio-container--card {
-         & .portfolio--card--tabs {
-            height: auto;
-            & .card--tabs__icon {
-               font-size: 1.8rem;
-               padding: 2px 4px;
-               margin-bottom: 6px;
-               height: 36px;
-               & svg {
-                  width: 28px;
-                  height: 28px;
-               }
-            }
-         }
-         & .portfolio--card--content {
-            & .card--content--presentation {
-               & p {
-                  margin-bottom: 0;
-                  max-width: 420px;
-               }
+      .portfolio-container--card .portfolio--card--tabs {
+         height: auto;
+
+         & .card--tabs__icon {
+            font-size: 1.8rem;
+            padding: 2px 4px;
+            margin-bottom: 6px;
+            height: 36px;
+            & svg {
+               width: 28px;
+               height: 28px;
             }
          }
       }

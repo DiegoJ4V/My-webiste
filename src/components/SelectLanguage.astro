@@ -1,0 +1,40 @@
+<select id="language-selector">
+   <option value="en" selected={true}>English</option>
+   <option value="es">Español</option>
+</select>
+
+<script>
+   import { textByLanguage } from '../scripts/translateElements'
+   const languageSelector = document.querySelector('#language-selector')
+   const locale = localStorage.getItem('language') ?? navigator.language
+
+   if (languageSelector instanceof HTMLSelectElement) {
+      const options = languageSelector.options
+      if (locale.includes('es')) {
+         options[1].setAttribute('selected', 'true')
+      } else {
+         options[0].removeAttribute('selected')
+      }
+   }
+
+   languageSelector?.addEventListener('change', (event) => {
+      if (event.target instanceof HTMLSelectElement) {
+         const language = event.target.value
+         localStorage.setItem('language', language)
+         textByLanguage()
+      } 
+   })
+</script>
+
+<style>
+   select {
+      font-size: 1.6rem;
+      margin-right: 16px;
+      border: none;
+
+      &:hover, 
+      &:focus-within {
+         text-decoration: underline;
+      }
+   }
+</style>
