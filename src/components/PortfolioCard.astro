@@ -46,8 +46,8 @@ const { repository, link, title, description, imgParameters, technologies } = As
             src={imgParameters.img} 
             alt={imgParameters.alt}
             quality="high"
-            widths={[320, 420]}
-            sizes={[320, 420].map((width) => `(max-width: ${width}px) ${width}px`).join(', ')}
+            widths={[320, 420, 640]}
+            sizes={[320, 420, 640].map((width) => `(max-width: ${width - 120}px) ${width}px`).join(', ')}
          /> 
          : null
       }
@@ -82,9 +82,11 @@ const { repository, link, title, description, imgParameters, technologies } = As
       border-radius: 12px;
       margin: 0 auto 32px auto;
       box-shadow: -8px var(--shadow-heavy) 0 #5b67ee;
+
       @media (prefers-reduced-motion: no-preference) {
          opacity: 0;
       }
+
       & .portfolio--card--tabs {
          display: flex;
          height: 44px;
@@ -93,6 +95,7 @@ const { repository, link, title, description, imgParameters, technologies } = As
          background: var(--blue);
          border-radius: 12px 12px 0 0;
          border: var(--border-light);
+
          & .card--tabs__icon {
             display: flex;
             width: fit-content;
@@ -108,23 +111,29 @@ const { repository, link, title, description, imgParameters, technologies } = As
             text-decoration: none;
             color: var(--black);
             transition: box-shadow 0.5s;
+
             & svg {
                margin-right: 4px;
             }
+
             & svg:nth-child(1) {
                stroke: black;
             }
          }
+
          & .card--tabs__icon:not(a) {
             color: #53535A;
+
             & svg:nth-child(1) {
                stroke: #53535A;
             }
          }
+
          & .card--tabs__icon:nth-child(2) {
             width: 100%;
             margin-right: 10px;
          }
+
          & .card--tabs__icon:hover:not(p), .card--tabs__icon:focus:not(p) {
             outline: none;
             text-decoration: underline;
@@ -132,6 +141,7 @@ const { repository, link, title, description, imgParameters, technologies } = As
             transition: box-shadow 0.5s;
          }
       }
+
       & .portfolio--card--content {
          display: grid;
          place-items: center;
@@ -153,7 +163,8 @@ const { repository, link, title, description, imgParameters, technologies } = As
          }
 
          & img {
-            max-width: 100%;
+            width: 100%;
+            max-width: 480px;
             height: auto;
             aspect-ratio: 16 / 9;
          }
@@ -185,7 +196,7 @@ const { repository, link, title, description, imgParameters, technologies } = As
          }
       }
 
-      @container portfolio-card (width > 820px) {
+      @container portfolio-card (width > 720px) {
          & .portfolio--card--content {
             height: fit-content;
             grid-template-columns: repeat(2, 1fr);

@@ -1,7 +1,7 @@
 ---
 import PortfolioCard from './PortfolioCard.astro';
-import bankPageImage from '../assets/BankPage.png';
-import menuPageImage from '../assets/menu-page.jpg';
+import bankPageImage from '../assets/images/bank-page.png';
+import pizzaPageImage from '../assets/images/pizza-page.png';
 import { getTranslation } from '../scripts/getTranslation'
 
 const portfolioTitle = getTranslation('portfolioTitle')
@@ -13,7 +13,7 @@ const portfolioContent = [{
    link: { name: 'https://ordeninginering.com', url: 'https://ordeninginering.com' },
    title: 'Ordeninginering',
    description: portfolio[0].description,
-   imgParameters: { img: menuPageImage, alt: 'Menu page'},
+   imgParameters: { img: pizzaPageImage, alt: 'Menu page'},
    technologies: [
       'Typescript', 'Astro', 'React 18', 'CSS 5', 'Mock service worker', 'Playwright', 'Java 21', 'Spring 3.2', 'Node', 'MySQL', 
       'Docker', 'Test containers', 'Kubernetes',  'RDS', 'S3', 'Cloudfront', 'Cloudflare', 'GKE', 'Github Actions'
