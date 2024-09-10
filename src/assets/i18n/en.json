@@ -14,13 +14,13 @@
 	"portfolioTitle": "Portfolio",
 	"portfolio": [
 		{
-			"description": "This ongoing project focuses on crafting a comprehensive pizza ordering website built as a Multi-Page Application (MPA). It is currently in progress, aiming to leverage cutting-edge technologies to create an intuitive platform for users to customize and order pizzas online.",
-			"specTech": "Technologies used:",
-			"featuresTitle ": "Features"
+			"altImage": "Menu page to order pizza",
+			"description": "Web-based pizza ordering platform built with microservices. Leveraging cutting-edge technologies to create an intuitive platform for users to customize and order pizzas online.",
+			"specTech": "Technologies used:"
 		},
 		{
 			"altImage": "Sign in page for bank account",
-			"description": "Create a transaction system with the ability to automate transactions, search them with filters based on name, date and type of transaction.",
+			"description": "Transactions system with the ability to automate transactions, search them with filters based on name, date and type of transaction.",
 			"specTech": "Technologies used:"
 		}
 	],

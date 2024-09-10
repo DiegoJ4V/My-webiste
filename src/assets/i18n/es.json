@@ -14,12 +14,13 @@
 	"portfolioTitle": "Portafolio",
 	"portfolio": [
 		{
-			"description": "Este proyecto en curso se centra en la creación de un sitio web completo de pedidos de pizza construido como una aplicación multi página (MPA). Actualmente está en progreso, con el objetivo de aprovechar las tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea.",
+			"altImage": "Página del menú para ordenar pizzas",
+			"description": "Plataforma web para hacer pedidos de pizza construido con micro servicios. Aprovechando tecnologías de vanguardia para crear una plataforma intuitiva para que los usuarios personalicen y pidan pizzas en línea.",
 			"specTech": "Tecnologías usadas:"
 		},
 		{
 			"altImage": "Página de inicio de sesión para bank account",
-			"description": "Cree un sistema de transacciones con la capacidad de automatizarlas, buscarlas con filtros a base del nombre, fecha y tipo de transacción.",
+			"description": "Sistema de transacciones con la capacidad de automatizarlas, buscarlas con filtros a base del nombre, fecha y tipo de transacción.",
 			"specTech": "Tecnologías usadas:"
 		}
 	],
