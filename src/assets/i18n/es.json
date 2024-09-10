@@ -8,8 +8,7 @@
 	"header": {
 		"from": "Desde: México",
 		"to": "Para: Usted",
-		"about__1": "Autodidacta apasionado por el ecosistema web. Diseñó y desarrolló productos sólidos utilizando soluciones modernas para todo tipo de necesidades.",
-		"about__2": "Me especializo en Java y React, pero soy una persona sumamente flexible que trabaja acorde a las necesidades del producto.",
+		"about": "Autodidacta apasionado por el ecosistema web. Diseño y desarrollo soluciones sólidas y modernas, para todo tipo de necesidades: diseño, front, back, CI/CD; no importa el área donde requieras una solución, yo puedo brindarte la.",
 		"email": "Responder"
 	},
 	"portfolioTitle": "Portafolio",

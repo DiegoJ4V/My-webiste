@@ -12,16 +12,14 @@ const EMAIL = 'guadarramahernandezdiego@gmail.com'
    </div>
    <div class="header--content-container animate-pop-in">
       <p class="header--content__email">
-         Diego Guadarrama Hernández 
-         <small>
+         Diego Guadarrama Hernández
+         <span>
             <span aria-hidden="true">&lt;</span>{EMAIL}<span aria-hidden="true">&gt;</span> 
-         </small>
          </span>
       </p>
       <p class="header--content__receiver">{headerTraductions.from}</p>
       <p class="header--content__receiver">{headerTraductions.to}</p>
-      <p class="header--content__presentation">{headerTraductions.about__1}</p>
-      <p class="header--content__presentation">{headerTraductions.about__2}</p>
+      <p class="header--content__presentation">{headerTraductions.about}</p>
       <footer id="contact">
          <a class="clickeable--container" rel="noreferrer" href={`mailto:${EMAIL}`} target="_blank">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,14 +62,16 @@ const EMAIL = 'guadarramahernandezdiego@gmail.com'
       background: var(--orange-300);
       border-bottom: 4px solid var(--black);
       padding: 16px 16px 32px 16px;
+
       & .header--title-container {
          background: #FFA46B;
          border: 2px solid var(--black);
          box-shadow: 2px 2px 0px 0px var(--black);
          margin-bottom: 8px;
          padding: 12px 16px;
+
          & h1 {
-            font-size: 1.8rem;
+            font-size: clamp(1.8rem, calc(2vw + 0.5rem), 2.8rem);
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -79,6 +79,7 @@ const EMAIL = 'guadarramahernandezdiego@gmail.com'
             color: var(--black);
          }
       }
+
       & .header--content-container {
          display: inline-flex;
          width: 100%;
@@ -91,25 +92,34 @@ const EMAIL = 'guadarramahernandezdiego@gmail.com'
          border-radius: 12px;
          border: 2px solid var(--black);
          box-shadow: 8px 8px 0px 0px #FF8A50;
+
          & .header--content__email {
-            font-size: 1.2rem;
+            font-size: clamp(1.2rem, calc(2vw + 0.5rem), 1.8rem);
             font-style: normal;
             font-weight: 400;
             color: var(--black);
+            
+            & > span {
+               font-size: clamp(1rem, calc(2vw + 0.5rem), 1.4rem);
+               color: #636363;
+            }
          }
+
          & .header--content__receiver {
-            font-size: 1.2rem;
+            font-size: clamp(1.2rem, calc(2vw + 0.5rem), 1.6rem);
             font-style: normal;
             font-weight: 400;
             color: #636363;
          }
+
          & .header--content__presentation {
-            font-size: 1.4rem;
+            font-size: clamp(1.4rem, calc(2vw + 0.5rem), 1.8rem);
             font-style: normal;
             font-weight: normal;
             line-height: 2rem;
          }
       }
+
       & footer {
          width: 100%;
          height: auto;
@@ -118,28 +128,13 @@ const EMAIL = 'guadarramahernandezdiego@gmail.com'
          align-items: flex-start;
          flex-wrap: wrap;
          gap: 8px;
-         .clickeable--container {
+
+         & .clickeable--container {
             height: 36px;
          }
+
          & svg {
             margin-right: 6px;
-         }
-      }
-      @media (width > 680px) {
-         & .header--title-container h1 {
-            font-size: 2.8rem;
-         }
-         & .header--content-container {
-            & .header--content__email {
-               font-size: 1.8rem;
-            }
-            & .header--content__receiver {
-               font-size: 1.6rem;
-            }
-            & .header--content__presentation {
-               font-size: 1.8rem;
-               line-height: 2.6rem;
-            }
          }
       }
    }

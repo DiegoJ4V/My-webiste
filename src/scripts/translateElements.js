@@ -25,8 +25,7 @@ export function textByLanguage() {
 
 	headerParagraph[1].textContent = header.from
 	headerParagraph[2].textContent = header.to
-	headerParagraph[3].textContent = header.about__1
-	headerParagraph[4].textContent = header.about__2
+	headerParagraph[3].textContent = header.about
 	headerReply.textContent = header.email
 
 	portfolioTitle.textContent = getTranslation('portfolioTitle')

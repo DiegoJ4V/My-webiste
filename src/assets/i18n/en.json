@@ -8,8 +8,7 @@
 	"header": {
 		"from": "From: México",
 		"to": "To: You",
-		"about__1": "Self-taught and passionate about the web ecosystem. I design and develop solid products using modern solutions for all kinds of needs.",
-		"about__2": "I'm specialized in Java and React, but I am an extremely flexible person who works according to the needs of the product.",
+		"about": "Self-taught and passionate about the web ecosystem. I design and develop solid and modern solutions, for all kind of needs: design, front, back, CI/CD; no matter the area where you need a solution, I can provide it.",
 		"email": "Reply"
 	},
 	"portfolioTitle": "Portfolio",
